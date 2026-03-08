@@ -18,7 +18,11 @@ curl -sSL https://raw.githubusercontent.com/owen2026a/ai-releases/main/install.s
 
 ## AI 智能助手
 
-AI Panel 深度集成 [OpenClaw](https://github.com/openai/openai-cookbook) 智能助手平台，为服务器管理提供全方位 AI 能力。不同于传统面板的手动操作方式，AI Panel 将人工智能融入每一个管理环节，让复杂的服务器运维变得简单直观。
+AI Panel 深度集成 [OpenClaw](https://openclaw.com) 智能助手平台，为服务器管理提供全方位 AI 能力。不同于传统面板的手动操作方式，AI Panel 将人工智能融入每一个管理环节，让复杂的服务器运维变得简单直观。
+
+<p align="center">
+  <img src="https://github.com/owen2026a/ai-releases/releases/download/v1.0.1/openclaw-ui.png" width="800" alt="OpenClaw 智能助手">
+</p>
 
 ### 多模型支持
 
