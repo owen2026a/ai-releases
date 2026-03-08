@@ -48,6 +48,10 @@ AI 助手支持 Agent 模式，可直接在服务器上执行操作：
 - 分析系统日志，定位故障原因
 - 自动化运维脚本编写与执行
 
+<p align="center">
+  <img src="https://github.com/owen2026a/ai-releases/releases/download/v1.0.1/ai-assistant.png" width="800" alt="AI Agent 模式">
+</p>
+
 ---
 
 ### AI 代码编辑助手
