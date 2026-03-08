@@ -1,6 +1,6 @@
 {
-  "version": "1.0.1",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.0.1/ai",
-  "checksum": "sha256:d430352519199ece4142929a44e0ace3b004279b5b9108a4ae0ef7de389b1c52",
-  "changelog": "AI Panel v1.0.1 - 单文件部署，集成全方位 AI 助手功能"
+  "version": "1.1.0",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.1.0/ai",
+  "checksum": "sha256:b585552eeb7c07d8f44075ead62e60ba8a39015a7b891fb145031b5f6d37a8b5",
+  "changelog": "AI Panel v1.1.0 - AI 模块助手全面集成：SSE 流式输出、MySQL/Cron/防火墙/Docker/终端/系统优化/仪表盘 AI 助手、聊天记录持久化"
 }
