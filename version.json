@@ -1,6 +1,6 @@
 {
-  "version": "1.1.0",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.1.0/ai",
-  "checksum": "sha256:c88c98643a88b6bfe135031cbaf64365c2892bf63a3e38ce603a8d0bab54b2f1",
-  "changelog": "AI Panel v1.1.0 - AI 模块助手全面集成：SSE 流式输出、MySQL/Cron/防火墙/Docker/终端/系统优化/仪表盘 AI 助手、聊天记录持久化"
+  "version": "1.1.1",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.1.1/ai",
+  "checksum": "sha256:8de2561f269be4865edfd248db38fc46c85fb30a8b11399e008abe7fd516d26b",
+  "changelog": "AI Panel v1.1.1 - 优化前端界面手机端适配，支持在 AI 浮窗中一键应用 Cron/MySQL/Firewall 生成的规则"
 }
