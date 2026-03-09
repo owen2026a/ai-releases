@@ -1,1 +1,6 @@
-{"version":"1.2.5","url":"https://github.com/owen2026a/ai-releases/releases/download/v1.2.5/ai","sha256":"f4ce7497d36dc58a04df2e6d5b926426191921921721729194fa79175c2fdde5"}
+{
+  "version": "1.2.6",
+  "url": "https://github.com/owen2026a/ai-releases/releases/download/v1.2.6/ai-linux-amd64",
+  "sha256": "ef921ce3b0d83e3bfdc5b2d7a5d212650844e1657a2db7ebe10725cbe679f0e9",
+  "changelog": "量化交易 Skills + 无损上下文引擎 + 设置 Tab 化"
+}
