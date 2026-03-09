@@ -16,19 +16,18 @@ curl -sSL https://raw.githubusercontent.com/owen2026a/ai-releases/main/install.s
 
 ---
 
-## 最新版本 v1.2.2
+## 最新版本 v1.2.3
 
 ### 新增功能
-- **全面更新 AI 模型列表**：覆盖 11 大 Provider 截至 2026.3.7 的最新模型
-- **OpenAI**：新增 GPT-5.4 Pro（旗舰 Computer Use）、GPT-5.3 Codex（代码）、o3/o3-pro/o4-mini 推理模型
-- **Gemini**：Gemini 3.1 Pro、3 Flash、3.1 Flash-Lite 全系列
-- **Moonshot**：更新为 Kimi K2.5（万亿 MoE）、Kimi Latest
-- **Qwen**：新增 QwQ-32B 深度推理模型
-- **xAI**：新增 Grok Code Fast 代码专用模型
-- **Mistral**：新增 Magistral Medium 推理模型
-- **OpenRouter**：热门模型更新为 GPT-5.4、Gemini 3 Flash 等
+- **OpenClaw 安装全面增强**：一键安装自动完成全部频道依赖 + Skills 工具链 + 记忆插件配置
+- **频道依赖自动安装**：WhatsApp (baileys)、Telegram (grammy)、Discord、Slack、飞书、LINE 等运行时依赖
+- **Skills 工具链**：自动安装 git、gh (GitHub CLI)、clawhub、ripgrep、uv
+- **长期记忆**：自动配置 memory-lancedb 插件（autoCapture + autoRecall），创建 MEMORY.md
+- **版本检测修复**：修复 OpenClaw 版本号格式不匹配导致永远提示"有新版本"
+- **升级同步**：OpenClaw 升级时自动重装全部依赖，不再丢失频道功能
 
 ### 历史版本
+- **v1.2.2**：全面更新 AI 模型列表（GPT-5.4 Pro、Gemini 3.1、o3/o4-mini、Kimi K2.5 等）
 - **v1.2.1**：飞书/钉钉/企业微信/QQ 频道绑定、自动更新修复
 - **v1.2.0**：OpenClaw GitHub/GitLab Token 配置、频道绑定、插件预装、长期记忆
 - **v1.1.2**：终端心跳保活+自动重连、AI 命令复制/执行按钮、软件 AI 安装助手
