@@ -16,14 +16,20 @@ curl -sSL https://raw.githubusercontent.com/owen2026a/ai-releases/main/install.s
 
 ---
 
-## 最新版本 v1.2.1
+## 最新版本 v1.2.2
 
 ### 新增功能
-- **国内频道绑定**：新增飞书、钉钉、企业微信、QQ 四个国内平台频道，可视化配置 Token 后自动同步到 OpenClaw
-- **OpenClaw 增强**：GitHub/GitLab Token 可视化配置、频道绑定管理、官方插件预装、长期记忆插件
-- **自动更新修复**：修复 version.json 字段名不匹配导致面板无法自动更新的问题
+- **全面更新 AI 模型列表**：覆盖 11 大 Provider 截至 2026.3.7 的最新模型
+- **OpenAI**：新增 GPT-5.4 Pro（旗舰 Computer Use）、GPT-5.3 Codex（代码）、o3/o3-pro/o4-mini 推理模型
+- **Gemini**：Gemini 3.1 Pro、3 Flash、3.1 Flash-Lite 全系列
+- **Moonshot**：更新为 Kimi K2.5（万亿 MoE）、Kimi Latest
+- **Qwen**：新增 QwQ-32B 深度推理模型
+- **xAI**：新增 Grok Code Fast 代码专用模型
+- **Mistral**：新增 Magistral Medium 推理模型
+- **OpenRouter**：热门模型更新为 GPT-5.4、Gemini 3 Flash 等
 
 ### 历史版本
+- **v1.2.1**：飞书/钉钉/企业微信/QQ 频道绑定、自动更新修复
 - **v1.2.0**：OpenClaw GitHub/GitLab Token 配置、频道绑定、插件预装、长期记忆
 - **v1.1.2**：终端心跳保活+自动重连、AI 命令复制/执行按钮、软件 AI 安装助手
 - **v1.1.1**：手机端适配优化、AI 浮窗一键应用、终端 AI 命令助手修复
