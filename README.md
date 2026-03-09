@@ -130,6 +130,15 @@ curl -sSL https://raw.githubusercontent.com/owen2026a/ai-releases/main/install.s
 - 智能分析网站目录所有 Web 文件，检测木马/后门/WebShell
 - 检测恶意 JS 注入、SEO 黑帽、暗链挂马、配置安全问题
 
+<p align="center">
+  <img src="https://github.com/owen2026a/ai/releases/download/v1.5.3/ai-webpage-generator.png" width="400" alt="AI 网页生成器">
+  <img src="https://github.com/owen2026a/ai/releases/download/v1.5.3/ai-file-editor.png" width="400" alt="AI 文件编辑助手">
+</p>
+<p align="center">
+  <img src="https://github.com/owen2026a/ai/releases/download/v1.5.3/ai-nginx-config.png" width="400" alt="AI Nginx 配置助手">
+  <img src="https://github.com/owen2026a/ai/releases/download/v1.5.3/ai-file-manager.png" width="400" alt="AI 文件管理器面板">
+</p>
+
 ### 安全功能
 - AES-256-GCM 数据库敏感字段加密（API Key、密码等）
 - 2FA 双因素认证（TOTP）
