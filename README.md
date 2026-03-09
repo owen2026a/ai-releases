@@ -10,7 +10,14 @@ curl -sSL https://raw.githubusercontent.com/owen2026a/ai-releases/main/install.s
 
 安装完成后访问 `https://服务器IP:38899`，默认账号 `admin` / `admin123456`。
 
-## 最新版本: v1.2.5
+## 最新版本: v1.2.6
+
+### v1.2.6
+- **量化交易 Skills**：预装 11 个量化交易插件（币安现货/合约、A 股量化监控、网格交易、套利扫描、Tushare 金融数据等）
+- **无损上下文引擎**：lossless-claw 插件自动安装启用，增量无损压缩，长对话不丢失信息
+- **设置面板 Tab 化**：LLM 配置 / 频道绑定 / Git 集成 / 量化交易 四个 Tab 切换，告别长滚动
+- 量化交易 Tab 支持在线搜索安装更多 ClawHub Skills
+- Skills 管理 API（列表/安装/卸载/搜索）
 
 ### v1.2.5
 - **网络搜索引擎配置**：可视化配置搜索引擎（Google/Grok/Kimi/Brave/Perplexity/Tavily MCP）
@@ -75,7 +82,7 @@ curl -sSL https://raw.githubusercontent.com/owen2026a/ai-releases/main/install.s
 
 ### AI 助手
 
-集成 [OpenClaw](https://openclaw.com) 智能助手，为服务器管理提供全方位 AI 能力。
+集成 OpenClaw 智能助手，为服务器管理提供全方位 AI 能力。
 
 **核心能力：**
 - 集成 OpenClaw，支持 Agent 模式（可执行系统命令、管理文件、分析日志）
@@ -87,8 +94,11 @@ curl -sSL https://raw.githubusercontent.com/owen2026a/ai-releases/main/install.s
 - **多平台频道绑定**（Telegram / Discord / Slack / 飞书 / 钉钉 / 企业微信 / QQ / MS Teams / Matrix 等）
 - **安装自动化**：一键安装 OpenClaw + 全部频道依赖 + Skills 工具链（git/gh/clawhub/rg/uv）+ 记忆插件
 - **长期记忆**：memory-lancedb 插件自动配置，autoCapture + autoRecall，跨会话记忆
+- **无损上下文引擎**：lossless-claw 插件自动安装启用，增量无损压缩，长对话不丢失信息
+- **量化交易 Skills**：预装 11 个量化交易插件（币安交易/A 股监控/套利扫描/网格交易等），支持在线搜索安装更多
 - **网络搜索配置**：可视化配置搜索引擎（Google/Grok/Kimi/Brave/Perplexity/Tavily），复用 LLM Key 或独立申请
-- **服务稳定性**：systemd Restart=always 策略，AI Agent 修改配置触发重启后自动恢复
+- **设置面板 Tab 化**：LLM 配置 / 频道绑定 / Git 集成 / 量化交易 四个 Tab 切换，告别长滚动
+- **服务稳定性**：systemd `Restart=always` 策略，AI Agent 修改配置触发重启后自动恢复
 
 **AI 模块助手：**
 
@@ -154,8 +164,8 @@ curl -sSL https://raw.githubusercontent.com/owen2026a/ai-releases/main/install.s
 
 | 文件 | 说明 |
 |------|------|
-| `install.sh` | 一键安装/升级脚本 |
-| `version.json` | 版本元数据（版本号 + 下载地址 + SHA256） |
+| install.sh | 一键安装/升级脚本 |
+| version.json | 版本元数据（版本号 + 下载地址 + SHA256） |
 | Releases | 各版本二进制文件 |
 
 ## 许可证
