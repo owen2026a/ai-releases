@@ -1,6 +1,6 @@
 {
-  "version": "1.2.6",
-  "url": "https://github.com/owen2026a/ai-releases/releases/download/v1.2.6/ai-linux-amd64",
-  "sha256": "eba4623ec428188437782b2f05b705e274a2003bed42278ba7711d885a8dc16e",
-  "changelog": "量化交易 Skills + 设置 Tab 化 + 插件修复"
+  "version": "1.2.7",
+  "url": "https://github.com/owen2026a/ai-releases/releases/download/v1.2.7/ai",
+  "sha256": "8b7c06b9cfa31b79c72f96125dd77f7feb7b5344738df28b8269b006ed32285e",
+  "changelog": "修复用户管理编辑密码无反馈问题，增加实时错误提示"
 }
