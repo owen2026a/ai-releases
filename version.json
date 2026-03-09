@@ -1,6 +1,6 @@
 {
   "version": "1.1.1",
   "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.1.1/ai",
-  "checksum": "sha256:8de2561f269be4865edfd248db38fc46c85fb30a8b11399e008abe7fd516d26b",
-  "changelog": "AI Panel v1.1.1 - 优化前端界面手机端适配，支持在 AI 浮窗中一键应用 Cron/MySQL/Firewall 生成的规则"
+  "checksum": "sha256:e277f31d348a69632276612c35faea372ea07e2667ac4de082c7a9f571177629",
+  "changelog": "AI Panel v1.1.1 - 优化前端界面手机端适配，支持 AI 浮窗一键应用规则，修复移动端侧边栏滚动问题"
 }
