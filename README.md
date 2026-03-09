@@ -2,41 +2,6 @@
 
 基于 Go 语言开发的现代化 Linux 服务器管理面板，单文件部署，无需运行时依赖。
 
-## 一键安装
-
-```bash
-curl -sSL https://raw.githubusercontent.com/owen2026a/ai-releases/main/install.sh | sudo bash
-```
-
-安装完成后访问 `https://服务器IP:38899`，默认账号 `admin` / `admin123456`。
-
-## 最新版本: v1.2.6
-
-### v1.2.6
-- **量化交易 Skills**：预装 11 个量化交易插件（币安现货/合约、A 股量化监控、网格交易、套利扫描、Tushare 金融数据等）
-- **无损上下文引擎**：lossless-claw 插件自动安装启用，增量无损压缩，长对话不丢失信息
-- **设置面板 Tab 化**：LLM 配置 / 频道绑定 / Git 集成 / 量化交易 四个 Tab 切换，告别长滚动
-- 量化交易 Tab 支持在线搜索安装更多 ClawHub Skills
-- Skills 管理 API（列表/安装/卸载/搜索）
-
-### v1.2.5
-- **网络搜索引擎配置**：可视化配置搜索引擎（Google/Grok/Kimi/Brave/Perplexity/Tavily MCP）
-- 复用已有 LLM API Key（Gemini/xAI/Moonshot），无需额外申请即可搜索
-- 独立 Key 方案（Brave/Perplexity/Tavily）附一键申请链接
-
-### v1.2.4
-- OpenClaw 服务稳定性修复：systemd Restart=always 策略
-
-### v1.2.3
-- OpenClaw 安装自动化：全部频道依赖 + Skills 工具链 + 记忆插件
-- 长期记忆：memory-lancedb 自动配置
-
-### v1.2.2
-- 全面更新 AI 模型列表（GPT-5.4/5.4 Pro、Gemini 3.1、Claude 4.6、o3/o4-mini、Kimi K2.5）
-
-### v1.2.1
-- 多平台频道绑定：Telegram / Discord / Slack / 飞书 / 钉钉 / 企业微信 / QQ
-
 ## 功能特性
 
 ### 系统监控
@@ -70,6 +35,7 @@ curl -sSL https://raw.githubusercontent.com/owen2026a/ai-releases/main/install.s
 - AI 网页生成器（描述需求自动生成网页、截图还原设计）
 - AI 安全检测（智能分析目录文件，检测木马/后门/恶意 JS/暗链/SEO 黑帽）
 - 文件压缩 / 解压（zip、tar.gz）
+- 文件搜索、WebShell 特征扫描
 
 ### 数据库管理
 - MySQL 数据库 / 用户 / 权限管理
@@ -82,7 +48,7 @@ curl -sSL https://raw.githubusercontent.com/owen2026a/ai-releases/main/install.s
 
 ### AI 助手
 
-集成 OpenClaw 智能助手，为服务器管理提供全方位 AI 能力。
+集成 [OpenClaw](https://openclaw.com) 智能助手，为服务器管理提供全方位 AI 能力。
 
 **核心能力：**
 - 集成 OpenClaw，支持 Agent 模式（可执行系统命令、管理文件、分析日志）
@@ -99,8 +65,10 @@ curl -sSL https://raw.githubusercontent.com/owen2026a/ai-releases/main/install.s
 - **网络搜索配置**：可视化配置搜索引擎（Google/Grok/Kimi/Brave/Perplexity/Tavily），复用 LLM Key 或独立申请
 - **设置面板 Tab 化**：LLM 配置 / 频道绑定 / Git 集成 / 量化交易 四个 Tab 切换，告别长滚动
 - **服务稳定性**：systemd `Restart=always` 策略，AI Agent 修改配置触发重启后自动恢复
+- 安装即用，自动配置 Gateway 认证
+- 可在软件管理页面一键安装/更新，保留配置
 
-**AI 模块助手：**
+**AI 模块助手（NEW）：**
 
 | 模块 | 功能 | 入口 |
 |------|------|------|
@@ -117,32 +85,44 @@ curl -sSL https://raw.githubusercontent.com/owen2026a/ai-releases/main/install.s
 **AI 文件编辑助手：**
 - 在代码编辑器中通过对话让 AI 修改代码，支持粘贴截图
 - Diff 对比查看修改内容，一键应用或撤销
+- 支持放弃所有修改、还原到原始内容
+- 可预览 HTML 文件效果
 
 **AI 网页生成器：**
 - 在文件管理器中一键呼出 AI，描述需求自动生成完整网页
 - 支持粘贴网页截图，AI 智能还原设计
+- 生成的文件自动保存到当前目录，支持多文件（HTML + CSS + JS）
+- 多轮对话持续优化生成效果
 
 **AI Nginx 配置助手：**
-- 对话式分析和修改 Nginx 配置
+- 在网站配置弹窗中打开 AI 助手，对话式分析和修改 Nginx 配置
 - 智能检测配置问题，一键生成反向代理、SSL 优化、缓存配置等
+- 修改方案可预览、一键应用、一键撤销
+- **支持多轮上下文**（在同一会话中持续对话优化配置）
 
 **AI 安全检测：**
 - 智能分析网站目录所有 Web 文件，检测木马/后门/WebShell
-- 检测恶意 JS 注入、SEO 黑帽、暗链挂马、配置安全问题
+- 检测恶意 JS 注入（流量劫持、广告跳转、加密代码）
+- 检测 SEO 黑帽（隐藏文字/链接、蜘蛛劫持、iframe 注入）
+- 检测暗链挂马（赌博/色情隐藏链接、base64 恶意内容）
+- 检测配置安全问题（.htaccess 篡改、.env 泄露）
 
 ### 安全功能
 - AES-256-GCM 数据库敏感字段加密（API Key、密码等）
 - 2FA 双因素认证（TOTP）
 - IP 白名单访问控制
-- 用户 / 分组权限管理
+- 用户 / 分组权限管理（编辑用户信息和密码时实时显示错误提示）
 - 防火墙规则管理（自动适配 UFW / Firewalld）
+- **AI 防火墙规则生成**（自然语言描述安全策略，自动生成规则）
 
 ### 其他
 - FTP 用户管理
-- 计划任务（Cron 可视化）+ AI 定时任务生成
-- Web 终端（浏览器内 SSH）+ AI 命令助手（一键复制/执行）
-- 系统优化 + AI 优化分析
-- AI 系统诊断（仪表盘一键 AI 健康检查）
+- 计划任务（Cron 可视化）+ **AI 定时任务生成**（自然语言描述需求，自动生成 Cron 表达式和命令）
+- Web 终端（浏览器内 SSH）+ **AI 命令助手**（描述任务，生成 Linux 命令，一键复制/执行到终端）
+  - WebSocket 心跳保活 + 断线自动重连，连接更稳定
+  - AI 生成的命令支持「复制」「执行」按钮，多行命令自动处理
+- 系统优化 + **AI 优化分析**（自动采集系统信息，给出针对性优化建议）
+- **AI 系统诊断**（仪表盘一键 AI 健康检查，识别异常和瓶颈）
 - 自动更新
 
 ## 多系统支持
@@ -154,19 +134,19 @@ curl -sSL https://raw.githubusercontent.com/owen2026a/ai-releases/main/install.s
 | CentOS 7+ | yum/dnf | Firewalld | 完整支持 |
 | AlmaLinux / Rocky 8+ | dnf | Firewalld | 完整支持 |
 
+## 一键安装
+
+```bash
+curl -sSL https://raw.githubusercontent.com/owen2026a/ai-releases/main/install.sh | sudo bash
+```
+
+安装完成后访问 `https://服务器IP:38899`，默认账号 `admin` / `admin123456`。
+
 ## 技术栈
 
 - **后端**: Go + Chi Router + GORM + SQLite
 - **前端**: HTML 模板 + Tailwind CSS + Alpine.js + HTMX
 - **部署**: 单二进制文件 + 模板目录
-
-## 文件说明
-
-| 文件 | 说明 |
-|------|------|
-| install.sh | 一键安装/升级脚本 |
-| version.json | 版本元数据（版本号 + 下载地址 + SHA256） |
-| Releases | 各版本二进制文件 |
 
 ## 许可证
 
