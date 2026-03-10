@@ -1,6 +1,1 @@
-{
-  "version": "1.2.7",
-  "url": "https://github.com/owen2026a/ai-releases/releases/download/v1.2.7/ai",
-  "sha256": "8b7c06b9cfa31b79c72f96125dd77f7feb7b5344738df28b8269b006ed32285e",
-  "changelog": "修复用户管理编辑密码无反馈问题，增加实时错误提示"
-}
+{"version":"1.2.8","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.2.8/ai","checksum":"sha256:bba5ba97b44a9f6d11913a23642427aacf224df5156ffb2fba30c563bb14b6dd","changelog":"修复OpenClaw安装时git缺失导致的ENOENT错误"}
