@@ -1,1 +1,1 @@
-{"version":"1.2.8","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.2.8/ai","checksum":"sha256:bba5ba97b44a9f6d11913a23642427aacf224df5156ffb2fba30c563bb14b6dd","changelog":"修复OpenClaw安装时git缺失导致的ENOENT错误"}
+{"version":"1.2.9","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.2.9/ai","checksum":"sha256:f7228633dd5db35f7d5133b7e6b79997db61d8d76a676ae6989412ec36a178a8","changelog":"修复自动更新下载URL为空的问题"}
