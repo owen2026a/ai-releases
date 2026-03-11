@@ -113,6 +113,7 @@
 - IP 白名单访问控制
 - 用户 / 分组权限管理（编辑用户信息和密码时实时显示错误提示）
 - 防火墙规则管理（自动适配 UFW / Firewalld）
+- **SSH 端口修改**（可视化修改 SSH 端口，自动适配 Ubuntu/Debian/CentOS/RHEL，支持 systemd socket activation + SELinux + 防火墙自动放行）
 - **AI 防火墙规则生成**（自然语言描述安全策略，自动生成规则）
 
 ### 其他
