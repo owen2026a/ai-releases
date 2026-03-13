@@ -1,1 +1,1 @@
-{"version":"1.3.3","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.3.3/ai","checksum":"sha256:f203fcea19b003971967910a9e5e74391858dc834970ac9cbffcc5ff627b7f97","changelog":"Gemini Embedding 2升级+防火墙SSH提示优化"}
+{"version":"1.3.4","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.3.4/ai","checksum":"sha256:27bee43326c7c0a45ec94eabd3c4a76d96d4f4bfa6580e13b35e2b6106648107","changelog":"修复 Web 终端 WebSocket 频繁断连：写超时泄漏、读超时不续期、事件监听器堆叠"}
