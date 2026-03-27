@@ -2,7 +2,7 @@
 
 轻量级 Linux 服务器管理面板，单文件部署，Go 语言开发。
 
-## 最新版本：v1.3.6
+## 最新版本：v1.3.7
 
 ## 一键安装
 
@@ -12,19 +12,19 @@ curl -sSL https://raw.githubusercontent.com/owen2026a/ai-releases/main/install.s
 
 安装完成后访问 `https://服务器IP:38899`，默认账号 `admin` / `admin123456`。
 
-## v1.3.6 更新内容
+## v1.3.7 更新内容
 
-### 新功能
-- **SSH 登录禁止**：防火墙页面新增一键开关，禁止所有外部 SSH 工具连接，面板 Web 终端不受影响
-  - 支持 UFW (Ubuntu/Debian)、firewalld (CentOS/RHEL)、iptables (兜底方案) 三种防火墙
-  - 开启前弹出安全警告，提示唯一管理方式为面板 Web 终端
-  - 操作后自动刷新规则列表
+### 适配 OpenClaw 2026.3.24
+- **图片生成模型迁移**：`imageModel` → `imageGenerationModel.primary`，适配 nano-banana-pro 移除
+- **Skills 安装优化**：优先使用 `openclaw skills install`（2026.3.22+），clawhub 作为降级方案
+- **频道依赖更新**：新增 `matrix-js-sdk`（Matrix 官方 SDK 插件）
+- **配置自动修复**：升级时运行 `openclaw doctor --fix` 自动修复废弃配置
+- **Skills 列表更新**：移除已废弃的 nano-banana-pro，新增 coding-agent + session-logs
+- **内置 Web 搜索**：Tavily / Exa / Firecrawl 变为内置搜索插件，按需配置
 
 ### 修复
-- **OpenClaw 配置校验**：修复 OpenClaw 2026.3.12 更新后配置校验失败无法启动
-- **网络搜索**：修复 Google Search 搜索引擎配置后无法使用
-- **OpenClaw 更新脚本**：加入配置清理（移除无效 key）和 clawhub 同步更新
-- **OpenResty 进程管理**：统一使用 systemctl 管理，避免孤儿进程导致端口冲突
+- **配置迁移**：升级脚本自动将旧 `agents.defaults.imageModel` 迁移到新 `imageGenerationModel` 路径
+- **syncAPIKeyToOpenClaw**：图片模型配置写入正确的 `imageGenerationModel.primary` 路径
 
 ## 核心功能
 
