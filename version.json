@@ -1,1 +1,1 @@
-{"version":"1.3.6","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.3.6/ai","checksum":"sha256:095d4db4072d697d5ad2469a11f3b0a8573f18c53fb3e21a4aacf58cd8f10502","changelog":"SSH 登录禁止开关 + OpenClaw 配置修复 + 网络搜索修复"}
+{"version":"1.3.7","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.3.7/ai","checksum":"sha256:9932161a5c242b3db55b1e5576bc1d6180b030e3682ee144c94f1eaba21734a9","changelog":"适配 OpenClaw 2026.3.24：imageGenerationModel 迁移、openclaw skills install、matrix-js-sdk、doctor --fix 自动修复"}
