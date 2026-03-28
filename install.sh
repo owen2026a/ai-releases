@@ -114,8 +114,8 @@ if [ -z "$VERSION_INFO" ]; then
 fi
 
 LATEST_VERSION=$(echo "$VERSION_INFO" | grep -o '"version"[[:space:]]*:[[:space:]]*"[^"]*"' | head -1 | cut -d'"' -f4)
-DOWNLOAD_URL=$(echo "$VERSION_INFO" | grep -o '"url"[[:space:]]*:[[:space:]]*"[^"]*"' | head -1 | cut -d'"' -f4)
-CHECKSUM=$(echo "$VERSION_INFO" | grep -o '"sha256"[[:space:]]*:[[:space:]]*"[^"]*"' | head -1 | cut -d'"' -f4)
+DOWNLOAD_URL=$(echo "$VERSION_INFO" | grep -o '"download_url"[[:space:]]*:[[:space:]]*"[^"]*"' | head -1 | cut -d'"' -f4)
+CHECKSUM=$(echo "$VERSION_INFO" | grep -o '"checksum"[[:space:]]*:[[:space:]]*"[^"]*"' | head -1 | cut -d'"' -f4)
 echo -e "${GREEN}最新版本: ${LATEST_VERSION}${NC}"
 
 # 下载程序（模板已嵌入二进制文件）
