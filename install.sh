@@ -8,6 +8,7 @@ set -e
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
+CYAN='\033[0;36m'
 NC='\033[0m' # No Color
 
 # 配置
@@ -99,6 +100,64 @@ if [ "$IS_UPGRADE" = true ]; then
     echo -e "${GREEN}检测到已有安装，将进行升级（保留数据库和配置）${NC}"
 fi
 
+# ========== 端口选择（仅全新安装） ==========
+check_port_conflict() {
+    local port=$1
+    if command -v ss &>/dev/null; then
+        ss -tlnp 2>/dev/null | grep -q ":${port} " && return 0
+    elif command -v netstat &>/dev/null; then
+        netstat -tlnp 2>/dev/null | grep -q ":${port} " && return 0
+    fi
+    return 1
+}
+
+gen_random_port() {
+    local port
+    local attempts=0
+    while [ $attempts -lt 50 ]; do
+        port=$((RANDOM % 10001 + 30000))
+        if ! check_port_conflict "$port"; then
+            echo "$port"
+            return
+        fi
+        attempts=$((attempts + 1))
+    done
+    echo "38899"
+}
+
+if [ "$IS_UPGRADE" = false ]; then
+    echo ""
+    echo -e "${CYAN}========================================${NC}"
+    echo -e "${CYAN}  管理端口设置${NC}"
+    echo -e "${CYAN}========================================${NC}"
+    echo -e "请输入面板管理端口（${YELLOW}1024-65535${NC}）"
+    echo -e "直接按 ${GREEN}回车${NC} 将随机分配 30000-40000 之间的端口"
+    echo ""
+    read -p "管理端口: " INPUT_PORT
+
+    if [ -z "$INPUT_PORT" ]; then
+        CURRENT_PORT=$(gen_random_port)
+        echo -e "${GREEN}随机分配端口: ${CURRENT_PORT}${NC}"
+    else
+        if ! [[ "$INPUT_PORT" =~ ^[0-9]+$ ]] || [ "$INPUT_PORT" -lt 1024 ] || [ "$INPUT_PORT" -gt 65535 ]; then
+            echo -e "${RED}端口无效（需为 1024-65535），使用随机端口${NC}"
+            CURRENT_PORT=$(gen_random_port)
+            echo -e "${GREEN}随机分配端口: ${CURRENT_PORT}${NC}"
+        elif check_port_conflict "$INPUT_PORT"; then
+            echo -e "${RED}端口 ${INPUT_PORT} 已被占用！${NC}"
+            if command -v ss &>/dev/null; then
+                ss -tlnp 2>/dev/null | grep ":${INPUT_PORT} " | head -1
+            fi
+            CURRENT_PORT=$(gen_random_port)
+            echo -e "${YELLOW}自动切换为随机端口: ${CURRENT_PORT}${NC}"
+        else
+            CURRENT_PORT="$INPUT_PORT"
+            echo -e "${GREEN}使用端口: ${CURRENT_PORT}${NC}"
+        fi
+    fi
+    echo ""
+fi
+
 # 创建目录
 echo -e "${YELLOW}创建应用目录...${NC}"
 mkdir -p "$APP_DIR" "$DATA_DIR" "$BACKUP_DIR"
@@ -118,7 +177,7 @@ DOWNLOAD_URL=$(echo "$VERSION_INFO" | grep -o '"download_url"[[:space:]]*:[[:spa
 CHECKSUM=$(echo "$VERSION_INFO" | grep -o '"checksum"[[:space:]]*:[[:space:]]*"[^"]*"' | head -1 | cut -d'"' -f4)
 echo -e "${GREEN}最新版本: ${LATEST_VERSION}${NC}"
 
-# 下载程序（模板已嵌入二进制文件）
+# 下载程序
 echo -e "${YELLOW}下载程序文件...${NC}"
 TMP_FILE="/tmp/ai_download"
 curl -L -o "$TMP_FILE" "$DOWNLOAD_URL"
@@ -133,7 +192,7 @@ if [ -n "$CHECKSUM" ]; then
     echo -e "${YELLOW}校验文件完整性...${NC}"
     EXPECTED_HASH=$(echo "$CHECKSUM" | sed 's/sha256://')
     ACTUAL_HASH=$(sha256sum "$TMP_FILE" | awk '{print $1}')
-    
+
     if [ "$EXPECTED_HASH" != "$ACTUAL_HASH" ]; then
         echo -e "${RED}错误: 文件校验失败${NC}"
         echo "期望: $EXPECTED_HASH"
@@ -167,13 +226,11 @@ chown root:root "$BINARY_PATH"
 SERVICE_FILE="/etc/systemd/system/ai.service"
 if [ "$IS_UPGRADE" = true ] && [ -f "$SERVICE_FILE" ]; then
     echo -e "${YELLOW}升级模式：保留现有 systemd 配置...${NC}"
-    # 从现有配置中获取端口
     CURRENT_PORT=$(grep -oP 'Environment=PORT=\K[0-9]+' "$SERVICE_FILE" 2>/dev/null || echo "38899")
     echo -e "${GREEN}当前端口: ${CURRENT_PORT}${NC}"
 else
-    echo -e "${YELLOW}配置 systemd 服务...${NC}"
-    CURRENT_PORT="38899"
-    cat > "$SERVICE_FILE" << 'EOF'
+    echo -e "${YELLOW}配置 systemd 服务 (端口: ${CURRENT_PORT})...${NC}"
+    cat > "$SERVICE_FILE" << SVCEOF
 [Unit]
 Description=AI Panel - Server Management Panel
 After=network.target
@@ -195,37 +252,59 @@ ProtectSystem=false
 ProtectHome=false
 
 # 环境变量
-Environment=PORT=38899
+Environment=PORT=${CURRENT_PORT}
 
 [Install]
 WantedBy=multi-user.target
-EOF
+SVCEOF
 fi
 
 # 重载 systemd
 systemctl daemon-reload
 
-# 检测并开启防火墙端口（仅全新安装或端口未开放时）
-if command -v ufw &> /dev/null && ufw status | grep -q "Status: active"; then
+# 检测并开启防火墙端口
+if command -v ufw &> /dev/null && ufw status 2>/dev/null | grep -q "Status: active"; then
     if ! ufw status | grep -q "${CURRENT_PORT}/tcp"; then
-        echo -e "${YELLOW}检测到 UFW 防火墙已启用，开放端口 ${CURRENT_PORT}...${NC}"
-        ufw allow ${CURRENT_PORT}/tcp comment 'AI Panel'
+        echo -e "${YELLOW}检测到 UFW 防火墙，开放端口 ${CURRENT_PORT}...${NC}"
+        ufw allow ${CURRENT_PORT}/tcp comment 'AI Panel' >/dev/null
+        echo -e "${GREEN}✓ UFW 已放行 ${CURRENT_PORT}/tcp${NC}"
     fi
 elif command -v firewall-cmd &> /dev/null && systemctl is-active --quiet firewalld; then
-    if ! firewall-cmd --list-ports | grep -q "${CURRENT_PORT}/tcp"; then
-        echo -e "${YELLOW}检测到 Firewalld 已启用，开放端口 ${CURRENT_PORT}...${NC}"
-        firewall-cmd --permanent --add-port=${CURRENT_PORT}/tcp
-        firewall-cmd --reload
+    if ! firewall-cmd --list-ports 2>/dev/null | grep -q "${CURRENT_PORT}/tcp"; then
+        echo -e "${YELLOW}检测到 Firewalld，开放端口 ${CURRENT_PORT}...${NC}"
+        firewall-cmd --permanent --add-port=${CURRENT_PORT}/tcp >/dev/null
+        firewall-cmd --reload >/dev/null
+        echo -e "${GREEN}✓ Firewalld 已放行 ${CURRENT_PORT}/tcp${NC}"
     fi
 fi
 
 # 启动服务
 echo -e "${YELLOW}启动服务...${NC}"
-systemctl enable "$SERVICE_NAME"
+systemctl enable "$SERVICE_NAME" >/dev/null 2>&1
 systemctl start "$SERVICE_NAME"
 
 # 等待服务启动
 sleep 3
+
+# ========== 公网 IP 检测 ==========
+detect_public_ip() {
+    local ip=""
+    for url in "https://ifconfig.me" "https://ip.sb" "https://ipinfo.io/ip" "https://api.ipify.org"; do
+        ip=$(curl -s --max-time 3 "$url" 2>/dev/null | grep -oE '^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$')
+        if [ -n "$ip" ]; then
+            echo "$ip"
+            return
+        fi
+    done
+    echo ""
+}
+
+SERVER_IP=$(detect_public_ip)
+if [ -n "$SERVER_IP" ]; then
+    ACCESS_URL="https://${SERVER_IP}:${CURRENT_PORT}"
+else
+    ACCESS_URL="https://服务器IP:${CURRENT_PORT}"
+fi
 
 # 检查服务状态
 if systemctl is-active --quiet "$SERVICE_NAME"; then
@@ -238,7 +317,13 @@ if systemctl is-active --quiet "$SERVICE_NAME"; then
     echo -e "${GREEN}========================================${NC}"
     echo ""
     echo -e "版本: ${GREEN}${LATEST_VERSION}${NC}"
-    echo -e "访问地址: ${GREEN}https://服务器IP:${CURRENT_PORT}${NC}"
+    echo -e "管理端口: ${GREEN}${CURRENT_PORT}${NC}"
+    if [ -n "$SERVER_IP" ]; then
+        echo -e "访问地址: ${GREEN}${ACCESS_URL}${NC}"
+    else
+        echo -e "访问地址: ${GREEN}https://服务器IP:${CURRENT_PORT}${NC}"
+        echo -e "${YELLOW}提示: 未能自动检测公网 IP，请替换为您的服务器 IP${NC}"
+    fi
     echo ""
     if [ "$IS_UPGRADE" = true ]; then
         echo -e "${GREEN}数据库和配置已保留，无需重新登录${NC}"
