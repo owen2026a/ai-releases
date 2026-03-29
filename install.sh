@@ -133,7 +133,7 @@ if [ "$IS_UPGRADE" = false ]; then
     echo -e "请输入面板管理端口（${YELLOW}1024-65535${NC}）"
     echo -e "直接按 ${GREEN}回车${NC} 将随机分配 30000-40000 之间的端口"
     echo ""
-    read -p "管理端口: " INPUT_PORT
+    read -p "管理端口: " INPUT_PORT < /dev/tty
 
     if [ -z "$INPUT_PORT" ]; then
         CURRENT_PORT=$(gen_random_port)
