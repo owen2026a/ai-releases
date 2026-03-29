@@ -123,7 +123,14 @@ curl -sSL https://raw.githubusercontent.com/owen2026a/ai-releases/main/install.s
 
 ### 安全功能
 - AES-256-GCM 数据库敏感字段加密（API Key、密码等）
-- 2FA 双因素认证（TOTP）
+- 2FA 双因素认证（TOTP），关闭需密码验证
+- **登录暴力破解防护**（同 IP 5次失败锁定15分钟）
+- **安全响应头**（X-Frame-Options、X-Content-Type-Options、Referrer-Policy、Permissions-Policy）
+- **WebSocket Origin 校验**（终端、日志、AI 助手连接校验来源）
+- **Cookie 安全**（SameSite=Strict、HTTPS 自动 Secure、7天过期、HttpOnly）
+- **命令注入防护**（crontab/chpasswd/systemctl 使用安全参数传递，禁止 shell 拼接）
+- **敏感文件保护**（文件管理器禁止读写系统敏感文件）
+- **输入校验**（用户名、服务操作、文件名全部正则校验）
 - IP 白名单访问控制
 - 用户 / 分组权限管理
 - 防火墙规则管理（自动适配 UFW / Firewalld）+ AI 规则生成
