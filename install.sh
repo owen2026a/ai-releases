@@ -127,13 +127,14 @@ gen_random_port() {
 
 # ========== 随机密码生成 ==========
 gen_random_password() {
-    local chars='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@$&!'
+    # 排除视觉易混淆字符: 0/O/o, 1/l/I
+    local chars='ABCDEFGHJKLMNPQRSTUVWXYZabcdefghjkmnpqrstuvwxyz23456789@$&!'
     local password=""
     local i
     # 保证至少包含每种字符各一个
-    password="${password}$(echo 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' | fold -w1 | shuf | head -1)"
-    password="${password}$(echo 'abcdefghijklmnopqrstuvwxyz' | fold -w1 | shuf | head -1)"
-    password="${password}$(echo '0123456789' | fold -w1 | shuf | head -1)"
+    password="${password}$(echo 'ABCDEFGHJKLMNPQRSTUVWXYZ' | fold -w1 | shuf | head -1)"
+    password="${password}$(echo 'abcdefghjkmnpqrstuvwxyz' | fold -w1 | shuf | head -1)"
+    password="${password}$(echo '23456789' | fold -w1 | shuf | head -1)"
     password="${password}$(echo '@$&!' | fold -w1 | shuf | head -1)"
     # 剩余 8 位随机
     for i in $(seq 1 8); do
