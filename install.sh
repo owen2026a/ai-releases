@@ -125,6 +125,24 @@ gen_random_port() {
     echo "38899"
 }
 
+# ========== 随机密码生成 ==========
+gen_random_password() {
+    local chars='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@$&!'
+    local password=""
+    local i
+    # 保证至少包含每种字符各一个
+    password="${password}$(echo 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' | fold -w1 | shuf | head -1)"
+    password="${password}$(echo 'abcdefghijklmnopqrstuvwxyz' | fold -w1 | shuf | head -1)"
+    password="${password}$(echo '0123456789' | fold -w1 | shuf | head -1)"
+    password="${password}$(echo '@$&!' | fold -w1 | shuf | head -1)"
+    # 剩余 8 位随机
+    for i in $(seq 1 8); do
+        password="${password}${chars:$((RANDOM % ${#chars})):1}"
+    done
+    # 打乱顺序
+    echo "$password" | fold -w1 | shuf | tr -d '\n'
+}
+
 if [ "$IS_UPGRADE" = false ]; then
     echo ""
     echo -e "${CYAN}========================================${NC}"
@@ -155,6 +173,9 @@ if [ "$IS_UPGRADE" = false ]; then
             echo -e "${GREEN}使用端口: ${CURRENT_PORT}${NC}"
         fi
     fi
+
+    # 生成随机密码
+    ADMIN_PASS=$(gen_random_password)
     echo ""
 fi
 
@@ -253,6 +274,7 @@ ProtectHome=false
 
 # 环境变量
 Environment=PORT=${CURRENT_PORT}
+Environment=INIT_ADMIN_PASS=${ADMIN_PASS}
 
 [Install]
 WantedBy=multi-user.target
@@ -285,6 +307,12 @@ systemctl start "$SERVICE_NAME"
 
 # 等待服务启动
 sleep 3
+
+# 首次安装：启动后清理 systemd 中的初始密码环境变量
+if [ "$IS_UPGRADE" = false ] && [ -n "$ADMIN_PASS" ]; then
+    sed -i '/Environment=INIT_ADMIN_PASS=/d' "$SERVICE_FILE"
+    systemctl daemon-reload
+fi
 
 # ========== 公网 IP 检测 ==========
 detect_public_ip() {
@@ -329,9 +357,9 @@ if systemctl is-active --quiet "$SERVICE_NAME"; then
         echo -e "${GREEN}数据库和配置已保留，无需重新登录${NC}"
     else
         echo -e "默认账号: ${YELLOW}admin${NC}"
-        echo -e "默认密码: ${YELLOW}admin123456${NC}"
+        echo -e "默认密码: ${YELLOW}${ADMIN_PASS}${NC}"
         echo ""
-        echo -e "${RED}重要: 请立即登录并修改默认密码！${NC}"
+        echo -e "${RED}⚠ 请务必记住以上密码，安装完成后不再显示！${NC}"
     fi
     echo ""
     echo "常用命令:"
