@@ -329,9 +329,9 @@ detect_public_ip() {
 
 SERVER_IP=$(detect_public_ip)
 if [ -n "$SERVER_IP" ]; then
-    ACCESS_URL="http://${SERVER_IP}:${CURRENT_PORT}"
+    ACCESS_URL="https://${SERVER_IP}:${CURRENT_PORT}"
 else
-    ACCESS_URL="http://服务器IP:${CURRENT_PORT}"
+    ACCESS_URL="https://服务器IP:${CURRENT_PORT}"
 fi
 
 # 检查服务状态
@@ -349,8 +349,12 @@ if systemctl is-active --quiet "$SERVICE_NAME"; then
     if [ -n "$SERVER_IP" ]; then
         echo -e "访问地址: ${GREEN}${ACCESS_URL}${NC}"
     else
-        echo -e "访问地址: ${GREEN}http://服务器IP:${CURRENT_PORT}${NC}"
+        echo -e "访问地址: ${GREEN}https://服务器IP:${CURRENT_PORT}${NC}"
         echo -e "${YELLOW}提示: 未能自动检测公网 IP，请替换为您的服务器 IP${NC}"
+    fi
+    if [ "$IS_UPGRADE" = false ]; then
+        echo -e "${CYAN}已自动启用 HTTPS（自签证书），浏览器会提示不安全，点击「继续访问」即可${NC}"
+        echo -e "${CYAN}登录面板后可在「面板SSL」页面申请免费正式证书${NC}"
     fi
     echo ""
     if [ "$IS_UPGRADE" = true ]; then
