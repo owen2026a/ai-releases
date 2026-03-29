@@ -2,7 +2,7 @@
 
 轻量级 Linux 服务器管理面板，单文件部署，Go 语言开发。
 
-## 最新版本：v1.3.7
+## 最新版本：v1.3.8
 
 ## 一键安装
 
@@ -27,26 +27,27 @@ curl -sSL https://raw.githubusercontent.com/owen2026a/ai-releases/main/install.s
 
 > 忘记管理端口或密码时，SSH 登录服务器执行 `/www/ai/ai port` 或 `/www/ai/ai reset` 即可找回。
 
-## v1.3.7 更新内容
+## v1.3.8 更新内容
 
-### 安装体验优化
-- **自定义管理端口**：安装时可输入自定义端口（1024-65535），按回车随机分配，自动检测端口冲突和开放防火墙
-- **随机管理密码**：默认密码改为随机生成的 12 位强密码（大小写+数字+特殊字符），不再使用固定默认密码
-- **自签 HTTPS 证书**：首次安装自动生成 10 年有效期自签证书，默认启用 HTTPS 加密访问
-- **公网 IP 检测**：安装完成自动检测并显示公网 IP 访问地址
-- **CLI 管理命令**：新增 `ai port` 查看端口、`ai reset` 重置密码，忘记信息可通过命令行找回
+### 微信个人号绑定
+- **扫码绑定微信**：面板内一键扫码绑定个人微信（基于 ClawBot 插件），支持多账号
+- **解绑管理**：已绑定账号列表展示，每个账号可单独解绑
+- **自动环境修复**：插件安装时自动检测并修复 `dist/package.json` name 冲突、`memory-lancedb` 依赖缺失、npm 缓存权限、`openclaw/plugin-sdk` 模块解析等问题
 
-### 适配 OpenClaw 2026.3.24
-- **图片生成模型迁移**：`imageModel` → `imageGenerationModel.primary`，适配 nano-banana-pro 移除
-- **Skills 安装优化**：优先使用 `openclaw skills install`（2026.3.22+），clawhub 作为降级方案
-- **频道依赖更新**：新增 `matrix-js-sdk`（Matrix 官方 SDK 插件）
-- **配置自动修复**：升级时运行 `openclaw doctor --fix` 自动修复废弃配置
-- **Skills 列表更新**：移除已废弃的 nano-banana-pro，新增 coding-agent + session-logs
-- **内置 Web 搜索**：Tavily / Exa / Firecrawl 变为内置搜索插件，按需配置
+### 适配 OpenClaw 2026.3.28
+- **bundled 插件依赖**：自动安装 OpenRouter/Copilot/Codex 等 bundled 插件的 node_modules
+- **x_search 搜索集成**：Grok 搜索自动配置 xAI bundled 插件
+- **频道依赖更新**：新增 `@matrix-org/matrix-sdk-crypto-nodejs`（Matrix E2EE）+ `botbuilder`（Teams SDK）
+- **配置清理增强**：自动移除 `qwen-portal-auth`、内置频道 stale allow 条目、旧 TTS 配置
+- **企业微信插件**：默认安装 `@wecom/wecom-openclaw-plugin`
 
-### 修复
-- **配置迁移**：升级脚本自动将旧 `agents.defaults.imageModel` 迁移到新 `imageGenerationModel` 路径
-- **syncAPIKeyToOpenClaw**：图片模型配置写入正确的 `imageGenerationModel.primary` 路径
+### 优化
+- **随机密码**：排除视觉易混淆字符（0/O/o/1/l/I），终端下更易辨认
+- **安装/更新脚本**：统一加入 `dist/package.json` name 修正、外部插件 openclaw 软链、npm 缓存修复
+
+### v1.3.7
+- 自定义管理端口、随机管理密码、自签 HTTPS 证书、CLI 管理命令（`ai port`/`ai reset`）
+- 适配 OpenClaw 2026.3.24（imageModel 迁移、Skills 安装优化、配置自动修复）
 
 ## 核心功能
 
