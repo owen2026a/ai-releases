@@ -1,6 +1,6 @@
-# AI Panel
+# AI Panel - 轻量级服务器管理面板
 
-轻量级 Linux 服务器管理面板，单文件部署，Go 语言开发。
+基于 Go 语言开发的现代化 Linux 服务器管理面板，单文件部署，无需运行时依赖。
 
 ## 最新版本：v1.3.8
 
@@ -10,9 +10,7 @@
 curl -sSL https://raw.githubusercontent.com/owen2026a/ai-releases/main/install.sh | sudo bash
 ```
 
-安装过程中可自定义管理端口（按回车随机分配 30000-40000 端口），安装完成后会显示随机生成的管理员密码。
-
-首次安装自动启用 HTTPS（自签证书），浏览器点击「继续访问」即可，登录后可在「面板 SSL」页面申请免费正式证书。
+安装过程中可自定义管理端口（按回车随机分配 30000-40000 端口），管理员密码自动随机生成（排除易混淆字符），首次安装自动启用 HTTPS（自签证书）。
 
 ## 常用命令
 
@@ -27,44 +25,118 @@ curl -sSL https://raw.githubusercontent.com/owen2026a/ai-releases/main/install.s
 
 > 忘记管理端口或密码时，SSH 登录服务器执行 `/www/ai/ai port` 或 `/www/ai/ai reset` 即可找回。
 
-## v1.3.8 更新内容
+## 功能特性
 
-### 微信个人号绑定
-- **扫码绑定微信**：面板内一键扫码绑定个人微信（基于 ClawBot 插件），支持多账号
-- **解绑管理**：已绑定账号列表展示，每个账号可单独解绑
-- **自动环境修复**：插件安装时自动检测并修复 `dist/package.json` name 冲突、`memory-lancedb` 依赖缺失、npm 缓存权限、`openclaw/plugin-sdk` 模块解析等问题
+### 系统监控
+- 实时 CPU、内存、磁盘使用率可视化
+- 系统负载、网络流量统计
+- 核心服务运行状态一览
 
-### 适配 OpenClaw 2026.3.28
-- **bundled 插件依赖**：自动安装 OpenRouter/Copilot/Codex 等 bundled 插件的 node_modules
-- **x_search 搜索集成**：Grok 搜索自动配置 xAI bundled 插件
-- **频道依赖更新**：新增 `@matrix-org/matrix-sdk-crypto-nodejs`（Matrix E2EE）+ `botbuilder`（Teams SDK）
-- **配置清理增强**：自动移除 `qwen-portal-auth`、内置频道 stale allow 条目、旧 TTS 配置
-- **企业微信插件**：默认安装 `@wecom/wecom-openclaw-plugin`
+### 网站管理
+- OpenResty (Nginx) 站点管理，可视化配置
+- **AI Nginx 配置助手**（智能分析配置、一键生成反代/缓存/SSL 优化，对话式修改）
+- **网站日志分析**（全维度可视化仪表盘，4 个分析 Tab：流量概览/错误排查/性能分析/访客统计）
+- **AI 日志智能分析**（流式输出专业分析报告，含流量评估、安全诊断、性能建议、优化方案）
+- **CC 攻击检测引擎**（多因子风险评分，高危 IP 自动识别，AI 给出封禁命令和防御配置）
+- SSL 证书自动申请（Let's Encrypt），支持 IP 证书
+- 反向代理、重定向规则配置
+- PHP 多版本切换（7.4 / 8.0 / 8.1 / 8.2 / 8.3）
 
-### 优化
-- **随机密码**：排除视觉易混淆字符（0/O/o/1/l/I），终端下更易辨认
-- **安装/更新脚本**：统一加入 `dist/package.json` name 修正、外部插件 openclaw 软链、npm 缓存修复
+### 软件管理
+- 一键安装 / 卸载 / 更新 / 启停
+- OpenResty、PHP、MySQL、Redis、vsftpd、Docker、Go、Node.js、phpMyAdmin
+- **AI 软件安装助手**（分析系统环境，推荐版本，一键执行安装命令）
+- OpenClaw AI 助手（Agent 模式，可执行系统命令）
+- **频道绑定**：可视化配置 Telegram、Discord、Slack、飞书、钉钉、企业微信、QQ 等多平台机器人
 
-### v1.3.7
-- 自定义管理端口、随机管理密码、自签 HTTPS 证书、CLI 管理命令（`ai port`/`ai reset`）
-- 适配 OpenClaw 2026.3.24（imageModel 迁移、Skills 安装优化、配置自动修复）
+### Docker 管理
+- 容器管理：创建、启停、删除、实时日志
+- 镜像管理、Compose 项目、网络和存储卷
+- **AI Compose 生成**（自然语言描述需求，自动生成 docker-compose.yml）
 
-## 核心功能
+### 文件管理
+- 在线文件浏览器，拖拽上传
+- 代码编辑器（语法高亮、全屏编辑）
+- AI 代码编辑助手（对话式修改、截图粘贴、Diff 对比、一键应用/撤销）
+- AI 网页生成器（描述需求自动生成网页、截图还原设计）
+- AI 安全检测（智能分析目录文件，检测木马/后门/恶意 JS/暗链/SEO 黑帽）
+- 文件压缩 / 解压（zip、tar.gz）
+- 文件搜索、WebShell 特征扫描
 
-- 系统监控（CPU/内存/磁盘/网络实时可视化）
-- 网站管理（OpenResty 站点、SSL 证书、反向代理）
-- 网站日志分析（全维度仪表盘 + AI 智能分析 + CC 攻击检测）
-- 软件管理（一键安装 MySQL/Redis/PHP/Docker/Node.js 等）
-- Docker 管理（容器/镜像/Compose/网络/存储卷）
-- 文件管理（在线编辑器 + AI 代码助手 + AI 网页生成器 + AI 安全检测）
-- 数据库管理（MySQL + Redis + AI SQL 助手）
-- 域名管理（Cloudflare/GoDaddy/DNSPod/阿里云等多注册商）
-- AI 助手（OpenClaw Agent 模式，10+ 模块 AI 助手）
-- 安全功能（2FA、IP 白名单、SSH 端口修改、SSH 登录禁止、加密存储）
-- 防火墙（UFW/Firewalld 自动适配 + AI 规则生成）
-- Web 终端 + AI 命令助手
-- 计划任务 + AI Cron 生成
+### 数据库管理
+- MySQL 数据库 / 用户 / 权限管理
+- **AI SQL 助手**（自然语言描述查询需求，自动生成 SQL 语句）
+- Redis 键值浏览、内存监控
+
+### 域名管理
+- 多注册商 API 对接：Cloudflare、GoDaddy、Namecheap、DNSPod、阿里云、Gname、Name.com
+- DNS 记录管理、批量修改 NS 服务器
+
+### AI 助手
+
+集成 [OpenClaw](https://openclaw.com) 智能助手，为服务器管理提供全方位 AI 能力。
+
+**核心能力：**
+- 集成 OpenClaw，支持 Agent 模式（可执行系统命令、管理文件、分析日志）
+- 支持多 Provider 切换：Gemini、Claude、GPT、DeepSeek、Groq、xAI、Mistral、Moonshot、通义千问等
+- SSE 流式输出，聊天记录持久化，全局 AI 浮窗
+- 多平台频道绑定（Telegram / Discord / Slack / 飞书 / 钉钉 / 企业微信 / 微信 / QQ / MS Teams / Matrix 等）
+- **微信绑定**：面板内扫码绑定个人微信（ClawBot 插件），支持多账号绑定/解绑
+- 一键安装 OpenClaw + 全部频道依赖 + Skills 工具链 + 记忆插件
+- 长期记忆（memory-lancedb）、无损上下文引擎（lossless-claw）
+- 量化交易 Skills：预装 11 个量化交易插件
+- 网络搜索配置：Google / Grok / Kimi / Brave / Perplexity / Tavily / Exa / Firecrawl
+- 设置面板 Tab 化：LLM 配置 / 频道绑定 / Git 集成 / 量化交易
+- 自动适配最新 OpenClaw 版本，安装/更新时自动迁移配置
+
+**AI 模块助手：**
+
+| 模块 | 功能 | 入口 |
+|------|------|------|
+| MySQL AI | 自然语言 → SQL 查询语句 | SQL 查询对话框 |
+| Cron AI | 自然语言 → Cron 表达式 + 命令 | 创建定时任务对话框 |
+| 防火墙 AI | 自然语言 → 防火墙规则（UFW/Firewalld） | 防火墙规则页面 |
+| Docker AI | 自然语言 → docker-compose.yml | 创建 Compose 对话框 |
+| 终端 AI | 任务描述 → Linux 命令（一键复制/执行） | 终端侧边栏 |
+| 软件 AI | 分析系统 → 推荐版本 → 一键执行安装 | 软件管理页面 |
+| 系统优化 AI | 自动采集参数 → 优化建议 | 系统优化页面 |
+| 仪表盘 AI | 自动采集状态 → 健康诊断 | 仪表盘页面 |
+| Nginx AI | 对话式分析/修改配置（支持多轮上下文） | 网站配置弹窗 |
+| 日志 AI | 日志分析 → 流量报告 + CC 攻击检测 + 防御方案 | 网站日志分析面板 |
+
+**AI 文件编辑助手：**
+- 在代码编辑器中通过对话让 AI 修改代码，支持粘贴截图
+- Diff 对比查看修改内容，一键应用或撤销
+- 可预览 HTML 文件效果
+
+**AI 网页生成器：**
+- 描述需求自动生成完整网页，支持粘贴网页截图智能还原设计
+- 生成的文件自动保存到当前目录，支持多文件（HTML + CSS + JS）
+
+**AI Nginx 配置助手：**
+- 对话式分析和修改 Nginx 配置，支持多轮上下文
+- 智能检测配置问题，一键生成反向代理、SSL 优化、缓存配置等
+
+**AI 安全检测：**
+- 智能分析网站目录所有 Web 文件，检测木马/后门/WebShell
+- 检测恶意 JS 注入、SEO 黑帽、暗链挂马、配置安全问题
+
+### 安全功能
+- AES-256-GCM 数据库敏感字段加密（API Key、密码等）
+- 2FA 双因素认证（TOTP）
+- IP 白名单访问控制
+- 用户 / 分组权限管理
+- 防火墙规则管理（自动适配 UFW / Firewalld）+ AI 规则生成
+- SSH 端口修改（可视化修改，自动适配多发行版 + SELinux + 防火墙放行）
+- SSH 登录禁止（一键禁止外部 SSH，Web 终端不受影响，可随时恢复）
+- 首次安装自动生成自签 HTTPS 证书
+
+### 其他
 - FTP 用户管理
+- 计划任务（Cron 可视化）+ AI 定时任务生成
+- Web 终端（浏览器内 SSH）+ AI 命令助手（一键复制/执行）
+- 系统优化 + AI 优化分析
+- AI 系统诊断（仪表盘一键健康检查）
 - 自动更新
 
 ## 支持系统
@@ -75,3 +147,13 @@ curl -sSL https://raw.githubusercontent.com/owen2026a/ai-releases/main/install.s
 | Debian 10+ | ✅ 完整支持 |
 | CentOS 7+ | ✅ 完整支持 |
 | AlmaLinux / Rocky 8+ | ✅ 完整支持 |
+
+## 技术栈
+
+- **后端**: Go + Chi Router + GORM + SQLite
+- **前端**: HTML 模板 + Tailwind CSS + Alpine.js + HTMX
+- **部署**: 单二进制文件 + 模板目录
+
+## 许可证
+
+MIT License
