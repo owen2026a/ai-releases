@@ -371,6 +371,8 @@ if systemctl is-active --quiet "$SERVICE_NAME"; then
     echo "  systemctl restart ai   # 重启服务"
     echo "  systemctl stop ai      # 停止服务"
     echo "  journalctl -u ai -f    # 查看日志"
+    echo "  /www/ai/ai port        # 查看管理端口"
+    echo "  /www/ai/ai reset       # 重置管理员密码"
 else
     echo -e "${RED}错误: 服务启动失败${NC}"
     echo "请检查日志: journalctl -u ai -n 50"
