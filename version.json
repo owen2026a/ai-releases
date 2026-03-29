@@ -1,1 +1,1 @@
-{"version":"1.3.7","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.3.7/ai","checksum":"sha256:9932161a5c242b3db55b1e5576bc1d6180b030e3682ee144c94f1eaba21734a9","changelog":"适配 OpenClaw 2026.3.24：imageGenerationModel 迁移、openclaw skills install、matrix-js-sdk、doctor --fix 自动修复"}
+{"version":"1.3.7","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.3.7/ai","checksum":"sha256:ad92a59c6c63a59ef933c149dd6f12ff345973fc22cf486866251b04fb40f620","changelog":"自定义端口+随机密码+公网IP检测+适配OpenClaw 2026.3.24"}
