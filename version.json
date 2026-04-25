@@ -1,1 +1,1 @@
-{"version":"1.4.03","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.4.03/ai","checksum":"sha256:a83e82b66fa26dda43b4e058e8ece5e39a5e688fe2c8a300fcca264230b32178","changelog":"面板端口自动识别（修复 SSL 页端口固定 38899 的问题）+ install.sh 端口范围 20000-60000 + 12 位随机密码字符集精简"}
+{"version":"1.4.04","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.4.04/ai","checksum":"sha256:21292ddd83ace6253c5c0822078b352568dcfe515c19c2bc25427abf11e5be9d","changelog":"补齐 RHEL 系（CentOS/Alma/Rocky）兼容缺口：PHP 扩展列表、PHP-FPM 权限、fail2ban whois/sendmail、AI 安装助手示例命令"}
