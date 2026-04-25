@@ -112,10 +112,13 @@ check_port_conflict() {
 }
 
 gen_random_port() {
+    # 范围 20000-60000（共 40001 个端口）
     local port
     local attempts=0
     while [ $attempts -lt 50 ]; do
-        port=$((RANDOM % 10001 + 30000))
+        port=$(( 20000 + RANDOM * 40001 / 32768 ))
+        if [ "$port" -gt 60000 ]; then port=60000; fi
+        if [ "$port" -lt 20000 ]; then port=20000; fi
         if ! check_port_conflict "$port"; then
             echo "$port"
             return
@@ -126,21 +129,23 @@ gen_random_port() {
 }
 
 # ========== 随机密码生成 ==========
+# 12 位，字符集：数字 + 大小写字母 + @$& 三种特殊字符
+# 排除视觉易混淆字符: 0/O/o, 1/l/I
 gen_random_password() {
-    # 排除视觉易混淆字符: 0/O/o, 1/l/I
-    local chars='ABCDEFGHJKLMNPQRSTUVWXYZabcdefghjkmnpqrstuvwxyz23456789@$&!'
+    local digits='23456789'
+    local upper='ABCDEFGHJKLMNPQRSTUVWXYZ'
+    local lower='abcdefghjkmnpqrstuvwxyz'
+    local special='@$&'
+    local all="${digits}${upper}${lower}${special}"
     local password=""
     local i
-    # 保证至少包含每种字符各一个
-    password="${password}$(echo 'ABCDEFGHJKLMNPQRSTUVWXYZ' | fold -w1 | shuf | head -1)"
-    password="${password}$(echo 'abcdefghjkmnpqrstuvwxyz' | fold -w1 | shuf | head -1)"
-    password="${password}$(echo '23456789' | fold -w1 | shuf | head -1)"
-    password="${password}$(echo '@$&!' | fold -w1 | shuf | head -1)"
-    # 剩余 8 位随机
+    password="${password}$(echo "$upper"   | fold -w1 | shuf -n1)"
+    password="${password}$(echo "$lower"   | fold -w1 | shuf -n1)"
+    password="${password}$(echo "$digits"  | fold -w1 | shuf -n1)"
+    password="${password}$(echo "$special" | fold -w1 | shuf -n1)"
     for i in $(seq 1 8); do
-        password="${password}${chars:$((RANDOM % ${#chars})):1}"
+        password="${password}${all:$((RANDOM % ${#all})):1}"
     done
-    # 打乱顺序
     echo "$password" | fold -w1 | shuf | tr -d '\n'
 }
 
@@ -149,17 +154,17 @@ if [ "$IS_UPGRADE" = false ]; then
     echo -e "${CYAN}========================================${NC}"
     echo -e "${CYAN}  管理端口设置${NC}"
     echo -e "${CYAN}========================================${NC}"
-    echo -e "请输入面板管理端口（${YELLOW}1024-65535${NC}）"
-    echo -e "直接按 ${GREEN}回车${NC} 将随机分配 30000-40000 之间的端口"
+    echo -e "请输入面板管理端口（建议 ${YELLOW}20000-60000${NC} 之间）"
+    echo -e "直接按 ${GREEN}回车${NC} 将在 20000-60000 范围内随机分配一个未被占用的端口"
     echo ""
-    read -p "管理端口: " INPUT_PORT < /dev/tty
+    read -p "管理端口 [回车随机]: " INPUT_PORT < /dev/tty
 
     if [ -z "$INPUT_PORT" ]; then
         CURRENT_PORT=$(gen_random_port)
         echo -e "${GREEN}随机分配端口: ${CURRENT_PORT}${NC}"
     else
         if ! [[ "$INPUT_PORT" =~ ^[0-9]+$ ]] || [ "$INPUT_PORT" -lt 1024 ] || [ "$INPUT_PORT" -gt 65535 ]; then
-            echo -e "${RED}端口无效（需为 1024-65535），使用随机端口${NC}"
+            echo -e "${RED}端口无效（需为 1024-65535），改用随机端口${NC}"
             CURRENT_PORT=$(gen_random_port)
             echo -e "${GREEN}随机分配端口: ${CURRENT_PORT}${NC}"
         elif check_port_conflict "$INPUT_PORT"; then
@@ -337,43 +342,59 @@ fi
 
 # 检查服务状态
 if systemctl is-active --quiet "$SERVICE_NAME"; then
-    echo -e "${GREEN}========================================${NC}"
     if [ "$IS_UPGRADE" = true ]; then
-        echo -e "${GREEN}       升级完成！${NC}"
-    else
-        echo -e "${GREEN}       安装完成！${NC}"
-    fi
-    echo -e "${GREEN}========================================${NC}"
-    echo ""
-    echo -e "版本: ${GREEN}${LATEST_VERSION}${NC}"
-    echo -e "管理端口: ${GREEN}${CURRENT_PORT}${NC}"
-    if [ -n "$SERVER_IP" ]; then
-        echo -e "访问地址: ${GREEN}${ACCESS_URL}${NC}"
-    else
-        echo -e "访问地址: ${GREEN}https://服务器IP:${CURRENT_PORT}${NC}"
-        echo -e "${YELLOW}提示: 未能自动检测公网 IP，请替换为您的服务器 IP${NC}"
-    fi
-    if [ "$IS_UPGRADE" = false ]; then
-        echo -e "${CYAN}已自动启用 HTTPS（自签证书），浏览器会提示不安全，点击「继续访问」即可${NC}"
-        echo -e "${CYAN}登录面板后可在「面板SSL」页面申请免费正式证书${NC}"
-    fi
-    echo ""
-    if [ "$IS_UPGRADE" = true ]; then
-        echo -e "${GREEN}数据库和配置已保留，无需重新登录${NC}"
-    else
-        echo -e "默认账号: ${YELLOW}admin${NC}"
-        echo -e "默认密码: ${YELLOW}${ADMIN_PASS}${NC}"
         echo ""
-        echo -e "${RED}⚠ 请务必记住以上密码，安装完成后不再显示！${NC}"
+        echo -e "${GREEN}╔══════════════════════════════════════════════════════════╗${NC}"
+        echo -e "${GREEN}║                   ✅  升级完成！                          ║${NC}"
+        echo -e "${GREEN}╚══════════════════════════════════════════════════════════╝${NC}"
+        echo ""
+        echo -e "  版本     : ${GREEN}${LATEST_VERSION}${NC}"
+        echo -e "  管理端口 : ${GREEN}${CURRENT_PORT}${NC}"
+        if [ -n "$SERVER_IP" ]; then
+            echo -e "  登录地址 : ${GREEN}${ACCESS_URL}${NC}"
+        else
+            echo -e "  登录地址 : ${GREEN}https://服务器IP:${CURRENT_PORT}${NC}"
+        fi
+        echo ""
+        echo -e "  ${GREEN}数据库和配置已保留，使用原有账号密码登录即可${NC}"
+        echo ""
+    else
+        echo ""
+        echo -e "${GREEN}╔══════════════════════════════════════════════════════════╗${NC}"
+        echo -e "${GREEN}║                   🎉  安装完成！                          ║${NC}"
+        echo -e "${GREEN}╚══════════════════════════════════════════════════════════╝${NC}"
+        echo ""
+        echo -e "  版本     : ${GREEN}${LATEST_VERSION}${NC}"
+        echo -e "  管理端口 : ${GREEN}${CURRENT_PORT}${NC}"
+        echo ""
+        echo -e "${YELLOW}━━━━━━━━━━━━━━━━━━━━━━ 登录信息 ━━━━━━━━━━━━━━━━━━━━━━${NC}"
+        echo ""
+        if [ -n "$SERVER_IP" ]; then
+            echo -e "  登录地址 : ${CYAN}${ACCESS_URL}${NC}"
+        else
+            echo -e "  登录地址 : ${CYAN}https://服务器IP:${CURRENT_PORT}${NC}"
+            echo -e "             ${YELLOW}（未能自动检测公网 IP，请替换为实际地址）${NC}"
+        fi
+        echo -e "  用户名   : ${CYAN}admin${NC}"
+        echo -e "  密码     : ${CYAN}${ADMIN_PASS}${NC}"
+        echo ""
+        echo -e "${YELLOW}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+        echo ""
+        echo -e "  ${RED}⚠  请务必复制保存以上密码，关闭终端后不再显示${NC}"
+        echo ""
+        echo -e "  ${CYAN}已自动启用 HTTPS（自签证书）${NC}"
+        echo -e "  浏览器首次访问会显示「不安全」，点击 ${GREEN}「高级」→「继续访问」${NC} 即可进入登录页"
+        echo -e "  登录后可在 ${GREEN}「面板 SSL」${NC} 页面针对此 IP 申请免费正式证书替换自签证书"
+        echo ""
     fi
-    echo ""
-    echo "常用命令:"
+    echo "常用命令："
     echo "  systemctl status ai    # 查看状态"
     echo "  systemctl restart ai   # 重启服务"
     echo "  systemctl stop ai      # 停止服务"
     echo "  journalctl -u ai -f    # 查看日志"
     echo "  /www/ai/ai port        # 查看管理端口"
     echo "  /www/ai/ai reset       # 重置管理员密码"
+    echo ""
 else
     echo -e "${RED}错误: 服务启动失败${NC}"
     echo "请检查日志: journalctl -u ai -n 50"
