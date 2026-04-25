@@ -320,7 +320,7 @@ if [ "$IS_UPGRADE" = false ] && [ -n "$ADMIN_PASS" ]; then
     systemctl daemon-reload
 fi
 
-# ========== 公网 IP 检测 ==========
+# ========== IP 检测：公网优先，失败退到内网 ==========
 detect_public_ip() {
     local ip=""
     for url in "https://ifconfig.me" "https://ip.sb" "https://ipinfo.io/ip" "https://api.ipify.org"; do
@@ -333,11 +333,36 @@ detect_public_ip() {
     echo ""
 }
 
+# 内网 IP：取 hostname -I 第一个非 lo / 非 link-local 的 IPv4
+detect_lan_ip() {
+    local ips ip
+    ips=$(hostname -I 2>/dev/null)
+    for ip in $ips; do
+        if [[ "$ip" =~ ^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$ ]] \
+           && [[ "$ip" != 127.* ]] \
+           && [[ "$ip" != 169.254.* ]]; then
+            echo "$ip"
+            return
+        fi
+    done
+    # 兜底：用 ip 命令
+    ip -4 addr show 2>/dev/null | grep -oE 'inet [0-9.]+' | awk '{print $2}' \
+        | grep -vE '^(127\.|169\.254\.)' | head -1
+}
+
 SERVER_IP=$(detect_public_ip)
+IP_KIND=""
 if [ -n "$SERVER_IP" ]; then
+    IP_KIND="public"
     ACCESS_URL="https://${SERVER_IP}:${CURRENT_PORT}"
 else
-    ACCESS_URL="https://服务器IP:${CURRENT_PORT}"
+    SERVER_IP=$(detect_lan_ip)
+    if [ -n "$SERVER_IP" ]; then
+        IP_KIND="lan"
+        ACCESS_URL="https://${SERVER_IP}:${CURRENT_PORT}"
+    else
+        ACCESS_URL="https://<服务器IP>:${CURRENT_PORT}"
+    fi
 fi
 
 # 检查服务状态
@@ -350,10 +375,14 @@ if systemctl is-active --quiet "$SERVICE_NAME"; then
         echo ""
         echo -e "  版本     : ${GREEN}${LATEST_VERSION}${NC}"
         echo -e "  管理端口 : ${GREEN}${CURRENT_PORT}${NC}"
-        if [ -n "$SERVER_IP" ]; then
-            echo -e "  登录地址 : ${GREEN}${ACCESS_URL}${NC}"
+        if [ "$IP_KIND" = "public" ]; then
+            echo -e "  登录地址 : ${GREEN}${ACCESS_URL}${NC}  ${YELLOW}(公网 IP)${NC}"
+        elif [ "$IP_KIND" = "lan" ]; then
+            echo -e "  登录地址 : ${GREEN}${ACCESS_URL}${NC}  ${YELLOW}(内网 IP)${NC}"
+            echo -e "             ${YELLOW}未检测到公网 IP；如服务器有公网 IP 请改用公网地址访问${NC}"
         else
-            echo -e "  登录地址 : ${GREEN}https://服务器IP:${CURRENT_PORT}${NC}"
+            echo -e "  登录地址 : ${GREEN}${ACCESS_URL}${NC}"
+            echo -e "             ${YELLOW}未能自动检测 IP，请替换为实际地址${NC}"
         fi
         echo ""
         echo -e "  ${GREEN}数据库和配置已保留，使用原有账号密码登录即可${NC}"
@@ -369,11 +398,14 @@ if systemctl is-active --quiet "$SERVICE_NAME"; then
         echo ""
         echo -e "${YELLOW}━━━━━━━━━━━━━━━━━━━━━━ 登录信息 ━━━━━━━━━━━━━━━━━━━━━━${NC}"
         echo ""
-        if [ -n "$SERVER_IP" ]; then
-            echo -e "  登录地址 : ${CYAN}${ACCESS_URL}${NC}"
+        if [ "$IP_KIND" = "public" ]; then
+            echo -e "  登录地址 : ${CYAN}${ACCESS_URL}${NC}  ${YELLOW}(公网 IP)${NC}"
+        elif [ "$IP_KIND" = "lan" ]; then
+            echo -e "  登录地址 : ${CYAN}${ACCESS_URL}${NC}  ${YELLOW}(内网 IP)${NC}"
+            echo -e "             ${YELLOW}未检测到公网 IP；如服务器有公网/弹性 IP 请改用公网地址${NC}"
         else
-            echo -e "  登录地址 : ${CYAN}https://服务器IP:${CURRENT_PORT}${NC}"
-            echo -e "             ${YELLOW}（未能自动检测公网 IP，请替换为实际地址）${NC}"
+            echo -e "  登录地址 : ${CYAN}${ACCESS_URL}${NC}"
+            echo -e "             ${YELLOW}（未能自动检测 IP，请替换为实际地址）${NC}"
         fi
         echo -e "  用户名   : ${CYAN}admin${NC}"
         echo -e "  密码     : ${CYAN}${ADMIN_PASS}${NC}"
