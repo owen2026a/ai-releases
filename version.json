@@ -1,1 +1,1 @@
-{"version":"1.4.01","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.4.01/ai","checksum":"sha256:78f2d7d8559ae50573969c258e7918e2c4b5a820c78cb0217d9faf46a8250a84","changelog":"全面安全加固（CSRF/WS Origin/AI Execute 二次密码/文件白名单/随机默认密码/限流）+ UI 修复"}
+{"version":"1.4.02","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.4.02/ai","checksum":"sha256:1587859ba819185f2b9c7c8686b24d834034dea58c5dd92f06cbada1c862bbee","changelog":"修复升级后老进程未被杀导致版本不切换的问题"}
