@@ -1,1 +1,1 @@
-{"version":"1.4.14","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.4.14/ai","checksum":"sha256:f6f8953b0abce2f7d640eb62c8fc564e7b9e7bf9605fd61beb0cd67befc34395","changelog":"AI 巡检日报：每天定时让 AI 扫一遍系统，生成中文报告并推送到通知渠道"}
+{"version":"1.4.15","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.4.15/ai","checksum":"sha256:8bde2dde0c7cf72c63ac627dfa8c0d51341f8293f778a7a2d5ccb295f0782331","changelog":"定时备份 + 异地存储：站点/MySQL/面板配置 → 本地或 SSH 远程，按天调度，自动保留 N 份"}
