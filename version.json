@@ -1,1 +1,1 @@
-{"version":"1.4.09","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.4.09/ai","checksum":"sha256:94f1b41db51b9df78e270c7459a803ce21bf1f5b20737482cb5303e07f63c755","changelog":"OpenClawChat 历史按字节截断；首个验证 v1.4.08 升级脚本修复的版本"}
+{"version":"1.4.10","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.4.10/ai","checksum":"sha256:7134f446d4ad672340618bd8c16786e27d076fb3bf671c9c8955e89ffa2efab7","changelog":"网站管理：新增搜索（按域名/站点名）；操作列收紧（5 常用 + 更多下拉）解决右侧裁切"}
