@@ -1,1 +1,1 @@
-{"version":"1.4.08","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.4.08/ai","checksum":"sha256:c3f81011f78328657ff808e0bae9ca451e9139a643d42858f511dac86eafe573","changelog":"修复升级脚本：v1.4.02 回归 bug 导致 1.4.04+ 用户被卡住——杀进程改用端口为基准，启动用绝对路径"}
+{"version":"1.4.09","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.4.09/ai","checksum":"sha256:94f1b41db51b9df78e270c7459a803ce21bf1f5b20737482cb5303e07f63c755","changelog":"OpenClawChat 历史按字节截断；首个验证 v1.4.08 升级脚本修复的版本"}
