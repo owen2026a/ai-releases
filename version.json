@@ -1,1 +1,1 @@
-{"version":"1.4.13","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.4.13/ai","checksum":"sha256:57e25fc4efc2df2c2674992e4e15fa3a94a28b132cf8fa5c1a08b7c0ac2f80a0","changelog":"AI 调用指标 Dashboard 页面：5 个 KPI 卡 + 按模块明细 + 自动刷新"}
+{"version":"1.4.14","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.4.14/ai","checksum":"sha256:f6f8953b0abce2f7d640eb62c8fc564e7b9e7bf9605fd61beb0cd67befc34395","changelog":"AI 巡检日报：每天定时让 AI 扫一遍系统，生成中文报告并推送到通知渠道"}
