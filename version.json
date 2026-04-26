@@ -1,1 +1,1 @@
-{"version":"1.4.16","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.4.16/ai","checksum":"sha256:d20ea86d7197b564788b406e3a7919acda2babec4d50e77a25b723e4ef737c3a","changelog":"Docker 应用商店：15 个开箱即用模板（Portainer/Vaultwarden/Gitea/WordPress/Nextcloud/Jellyfin 等）一键启动"}
+{"version":"1.4.17","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.4.17/ai","checksum":"sha256:521f8c6d6a3732d13823fbe56ef387d76aa1bcc0e1d6793879366b71014d619d","changelog":"移动端适配全局补强：modal/grid/table/标题栏在小屏幕和平板下自动适配"}
