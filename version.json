@@ -1,1 +1,1 @@
-{"version":"1.4.05","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.4.05/ai","checksum":"sha256:18c6834e300e284d5df00b54468b5c7ec0382131599d6b8ebeb9a0fe5d7c1c51","changelog":"AI 集成防御性加固：prompt 注入清洗、危险命令黑名单、日志 50KB 截断、LLM 调用重试、采集 5s 超时、AI 调用全部审计"}
+{"version":"1.4.06","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.4.06/ai","checksum":"sha256:b17f66d22ace423023113959a06eff3a71a73260d7213937d2ddcb86ded83798","changelog":"AI 第二轮：多 provider 错误信息统一、历史按字节截断、SSE 总输出 5MB 上限、Nginx AI 标记提取收紧、SSE 增加 progress 事件"}
