@@ -1,1 +1,1 @@
-{"version":"1.4.07","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.4.07/ai","checksum":"sha256:ba26b112a20dd017af746c517df970e685f8252384a58d1eac3e34576dfd176a","changelog":"AI 第三轮：Prometheus 指标 (/metrics + /api/admin/ai-metrics)、标记提取器抽出公用包、parseNginxAIResponse 重构"}
+{"version":"1.4.08","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.4.08/ai","checksum":"sha256:c3f81011f78328657ff808e0bae9ca451e9139a643d42858f511dac86eafe573","changelog":"修复升级脚本：v1.4.02 回归 bug 导致 1.4.04+ 用户被卡住——杀进程改用端口为基准，启动用绝对路径"}
