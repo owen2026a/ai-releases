@@ -1,1 +1,1 @@
-{"version":"1.4.04","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.4.04/ai","checksum":"sha256:21292ddd83ace6253c5c0822078b352568dcfe515c19c2bc25427abf11e5be9d","changelog":"补齐 RHEL 系（CentOS/Alma/Rocky）兼容缺口：PHP 扩展列表、PHP-FPM 权限、fail2ban whois/sendmail、AI 安装助手示例命令"}
+{"version":"1.4.05","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.4.05/ai","checksum":"sha256:18c6834e300e284d5df00b54468b5c7ec0382131599d6b8ebeb9a0fe5d7c1c51","changelog":"AI 集成防御性加固：prompt 注入清洗、危险命令黑名单、日志 50KB 截断、LLM 调用重试、采集 5s 超时、AI 调用全部审计"}
