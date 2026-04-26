@@ -1,1 +1,1 @@
-{"version":"1.4.11","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.4.11/ai","checksum":"sha256:17292065f18570410e00afa3bf80cfc8975279b1e31b20dc7a7ee4906a424936","changelog":"多渠道通知系统：Telegram / 钉钉 / 企微 / 飞书 / 邮件 / 通用 Webhook，可视化配置 + 一键测试发送，敏感字段加密存储"}
+{"version":"1.4.12","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.4.12/ai","checksum":"sha256:2645cfb0236994021f9c094e50f900a480ee2fafd549618fbb0acd3aa643c4ef","changelog":"服务自愈：systemd 服务挂掉自动重启 + 通过通知渠道告警"}
