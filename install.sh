@@ -204,14 +204,37 @@ DOWNLOAD_URL=$(echo "$VERSION_INFO" | grep -o '"download_url"[[:space:]]*:[[:spa
 CHECKSUM=$(echo "$VERSION_INFO" | grep -o '"checksum"[[:space:]]*:[[:space:]]*"[^"]*"' | head -1 | cut -d'"' -f4)
 echo -e "${GREEN}最新版本: ${LATEST_VERSION}${NC}"
 
-# 下载程序
+# 下载程序：3 次重试 + 5 分钟超时（短暂网络抖动兜底）
 echo -e "${YELLOW}下载程序文件...${NC}"
 TMP_FILE="/tmp/ai_download"
-curl -L -o "$TMP_FILE" "$DOWNLOAD_URL"
+rm -f "$TMP_FILE"
 
-if [ ! -f "$TMP_FILE" ]; then
-    echo -e "${RED}错误: 下载失败${NC}"
+DOWNLOAD_OK=false
+for attempt in 1 2 3; do
+    echo -e "${YELLOW}  尝试 ${attempt}/3 ...${NC}"
+    if curl -fL --max-time 300 --retry 0 --progress-bar -o "$TMP_FILE" "$DOWNLOAD_URL"; then
+        DOWNLOAD_OK=true
+        break
+    fi
+    echo -e "${YELLOW}  第 ${attempt} 次下载失败，等待 3 秒后重试...${NC}"
+    sleep 3
+done
+
+if [ "$DOWNLOAD_OK" != "true" ] || [ ! -s "$TMP_FILE" ]; then
+    echo -e "${RED}错误: 下载失败（已重试 3 次）${NC}"
+    echo "下载 URL: $DOWNLOAD_URL"
+    echo "请检查网络或手动下载该文件后放到 $TMP_FILE 再重跑本脚本。"
+    rm -f "$TMP_FILE"
     exit 1
+fi
+
+# 基本可执行性检测：避免下到 HTML 404 页面也当成二进制
+if ! file "$TMP_FILE" 2>/dev/null | grep -qE 'ELF|executable'; then
+    if head -c 200 "$TMP_FILE" | grep -qiE '<html|<!doctype|404|not found'; then
+        echo -e "${RED}错误: 下载内容像是 HTML 错误页，不是二进制文件${NC}"
+        rm -f "$TMP_FILE"
+        exit 1
+    fi
 fi
 
 # 校验文件
@@ -228,19 +251,45 @@ if [ -n "$CHECKSUM" ]; then
         exit 1
     fi
     echo -e "${GREEN}文件校验通过${NC}"
+else
+    echo -e "${YELLOW}警告: version.json 未提供 checksum，跳过完整性校验${NC}"
 fi
 
-# 停止现有服务
+# 停止现有服务 + 按端口杀残留进程兜底（v1.4.08 经验：cmdline 不匹配会失败）
+CURRENT_PORT_DETECT=$(grep -oP 'Environment=PORT=\K[0-9]+' /etc/systemd/system/ai.service 2>/dev/null || echo "38899")
 if systemctl is-active --quiet "$SERVICE_NAME" 2>/dev/null; then
     echo -e "${YELLOW}停止现有服务...${NC}"
     systemctl stop "$SERVICE_NAME"
 fi
 
 # 备份旧版本
+LAST_BACKUP=""
 if [ -f "$BINARY_PATH" ]; then
     echo -e "${YELLOW}备份旧版本...${NC}"
     OLD_VERSION=$(timeout 5 "$BINARY_PATH" -version 2>/dev/null || echo "unknown")
-    cp "$BINARY_PATH" "$BACKUP_DIR/ai_${OLD_VERSION}_$(date +%Y%m%d%H%M%S)"
+    LAST_BACKUP="$BACKUP_DIR/ai_${OLD_VERSION}_$(date +%Y%m%d%H%M%S)"
+    cp "$BINARY_PATH" "$LAST_BACKUP"
+    # 清理旧备份，保留最近 5 个
+    ls -1t "$BACKUP_DIR"/ai_* 2>/dev/null | tail -n +6 | xargs -r rm -f
+fi
+
+# 等端口释放；仍占用则按端口杀残留进程
+if command -v ss >/dev/null 2>&1; then
+    for i in 1 2 3 4 5; do
+        if ! ss -tln 2>/dev/null | grep -q ":${CURRENT_PORT_DETECT} "; then
+            break
+        fi
+        sleep 1
+    done
+    if ss -tln 2>/dev/null | grep -q ":${CURRENT_PORT_DETECT} "; then
+        echo -e "${YELLOW}  端口 ${CURRENT_PORT_DETECT} 仍被占用，按端口杀残留进程...${NC}"
+        if command -v fuser >/dev/null 2>&1; then
+            fuser -k "${CURRENT_PORT_DETECT}/tcp" 2>/dev/null || true
+        elif command -v lsof >/dev/null 2>&1; then
+            lsof -ti "tcp:${CURRENT_PORT_DETECT}" 2>/dev/null | xargs -r kill -9 2>/dev/null || true
+        fi
+        sleep 1
+    fi
 fi
 
 # 安装新版本
@@ -311,8 +360,33 @@ echo -e "${YELLOW}启动服务...${NC}"
 systemctl enable "$SERVICE_NAME" >/dev/null 2>&1
 systemctl start "$SERVICE_NAME"
 
-# 等待服务启动
-sleep 3
+# 等待服务启动 + 健康检查（端口监听 + service active 双条件）
+echo -e "${YELLOW}健康检查中（最多 30s）...${NC}"
+HEALTHY=false
+for i in $(seq 1 30); do
+    if systemctl is-active --quiet "$SERVICE_NAME" && \
+       (ss -tln 2>/dev/null | grep -q ":${CURRENT_PORT} " || \
+        netstat -tln 2>/dev/null | grep -q ":${CURRENT_PORT} "); then
+        HEALTHY=true
+        break
+    fi
+    sleep 1
+done
+
+# 升级失败时自动回滚到上一版备份
+if [ "$HEALTHY" != "true" ] && [ "$IS_UPGRADE" = true ] && [ -n "$LAST_BACKUP" ] && [ -f "$LAST_BACKUP" ]; then
+    echo -e "${RED}新版本启动失败，自动回滚到备份: $LAST_BACKUP${NC}"
+    systemctl stop "$SERVICE_NAME" 2>/dev/null || true
+    cp "$LAST_BACKUP" "$BINARY_PATH"
+    chmod 755 "$BINARY_PATH"
+    systemctl start "$SERVICE_NAME" || true
+    sleep 3
+    if systemctl is-active --quiet "$SERVICE_NAME"; then
+        echo -e "${GREEN}回滚成功，旧版本已恢复运行${NC}"
+        # 仍然继续后面的提示流程，但标记为回滚
+        ROLLBACK_DONE=true
+    fi
+fi
 
 # 首次安装：启动后清理 systemd 中的初始密码环境变量
 if [ "$IS_UPGRADE" = false ] && [ -n "$ADMIN_PASS" ]; then
