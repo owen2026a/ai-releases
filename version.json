@@ -1,6 +1,6 @@
 {
-  "version": "1.4.84",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.84/ai",
-  "checksum": "sha256:491fa05e275ba43f3b97e31093e18458d3e017d96943a497638e9bfa8b926e47",
-  "changelog": "同机 Redis 蓝绿切换：面板 Redis 临时端口挂宝塔从库同步，追平后秒切 6379（运行时改端口不重载），近零中断、零数据丢失"
+  "version": "1.4.85",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.85/ai",
+  "checksum": "sha256:64c579742990c42099a4280fcc72261005994d329ba4657bf216671e61d3ec7b",
+  "changelog": "迁移结果页就地切换收尾（Redis 蓝绿秒切/停宝塔Web/启本面板Web/永久停用宝塔），无需返回环境预检；含 v1.4.84 同机 Redis 蓝绿切换"
 }
