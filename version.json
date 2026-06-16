@@ -1,1 +1,1 @@
-{"version":"1.4.93","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.4.93/ai","checksum":"sha256:05b03517eb349df0b8d706c4c1a581acd3088ca15092ddf70a9d3cdd66220df1","changelog":"修复RHEL/remi下PHP检测：软件管理误报未安装、网站编辑PHP版本下拉为空（已迁移PHP站只能选纯静态）"}
+{"version":"1.4.94","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.4.94/ai","checksum":"sha256:fe979e2ba40066526f16452b5bd765250d3356dd1ffb4245989c185345a67e1b","changelog":"修复 CentOS 7 装 Node.js/OpenClaw：glibc 2.17 改用 unofficial-builds glibc-217 构建"}
