@@ -1,1 +1,1 @@
-{"version":"1.4.98","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.4.98/ai","checksum":"sha256:d12f849cdce3415f27a1af8d66c1f0b1f9d7a236ae16f387253870d9e9be0c0e","changelog":"修复编辑网站保存会清空 IP 白名单等高级设置"}
+{"version":"1.4.99","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.4.99/ai","checksum":"sha256:e60c717f695087f285b9c681ac828d1954ebdf8691e6c41c004c90f06ba7df47","changelog":"宝塔目录自适应+彻底清理残余+修复CentOS7装OpenClaw的sudo npm找不到"}
