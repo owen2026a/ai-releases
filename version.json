@@ -1,1 +1,6 @@
-{"version":"1.4.80","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.4.80/ai","checksum":"sha256:cbaca5e3be14f5e5c636e7e71db412f45144349637eb77b6b8ea81420a86237b","changelog":"修复 CentOS/RHEL 在宝塔环境下安装 PHP 失败：1) 自动清理宝塔残留、把 libzip5 钉死的孤儿包 libzip5-devel/-tools（旧版报 exit status 5）；2) php-fpm 每个版本改用独立 unix socket，避免多版本/宝塔都抢 9000 端口启动失败。"}
+{
+  "version": "1.4.81",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.81/ai",
+  "checksum": "sha256:f966ba918060101f9a45c99eb81393ae6601c010d9ee3b16a8c7a54caecac9ae",
+  "changelog": "迁移向导 SSL 证书无缝接管（LE 证书纳入面板自动续期/续期回退全新签发）；cron 识别宝塔内部任务默认不勾选；修复泛域名被误判非法导致整站迁移跳过"
+}
