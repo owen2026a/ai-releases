@@ -1,1 +1,1 @@
-{"version":"1.4.94","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.4.94/ai","checksum":"sha256:fe979e2ba40066526f16452b5bd765250d3356dd1ffb4245989c185345a67e1b","changelog":"修复 CentOS 7 装 Node.js/OpenClaw：glibc 2.17 改用 unofficial-builds glibc-217 构建"}
+{"version":"1.4.95","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.4.95/ai","checksum":"sha256:47c6150648f8139417096d47c2af215dc16a4d837329745d1292bf9e23727973","changelog":"修复侧边栏未显示 Redis 管理入口（识别面板自有 ai-redis 实例）"}
