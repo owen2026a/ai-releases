@@ -1,6 +1,6 @@
 {
-  "version": "1.4.82",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.82/ai",
-  "checksum": "sha256:82157926fdb78ae0ead928bbb4501c5569ed8363cbd4c545c69bb5df97749c10",
-  "changelog": "迁移向导：预演结果页可直接「正式开始迁移」无需返回上一步；修正成功/跳过重复计数（三桶互斥）"
+  "version": "1.4.83",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.83/ai",
+  "checksum": "sha256:6cecc4b35decf1d5d09032b32e6ee2edc654747f8a6a1bc6dcba9c25193a3448",
+  "changelog": "迁移修复：chown 解锁 .user.ini 不再整站失败；建站 status 列启动自愈；Redis 已运行时禁止装系统版顶替（防业务中断）"
 }
