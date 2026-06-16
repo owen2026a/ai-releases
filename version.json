@@ -1,6 +1,6 @@
 {
-  "version": "1.4.81",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.81/ai",
-  "checksum": "sha256:f966ba918060101f9a45c99eb81393ae6601c010d9ee3b16a8c7a54caecac9ae",
-  "changelog": "迁移向导 SSL 证书无缝接管（LE 证书纳入面板自动续期/续期回退全新签发）；cron 识别宝塔内部任务默认不勾选；修复泛域名被误判非法导致整站迁移跳过"
+  "version": "1.4.82",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.82/ai",
+  "checksum": "sha256:82157926fdb78ae0ead928bbb4501c5569ed8363cbd4c545c69bb5df97749c10",
+  "changelog": "迁移向导：预演结果页可直接「正式开始迁移」无需返回上一步；修正成功/跳过重复计数（三桶互斥）"
 }
