@@ -304,6 +304,12 @@ if [ "$IS_UPGRADE" = true ] && [ -f "$SERVICE_FILE" ]; then
     echo -e "${YELLOW}升级模式：保留现有 systemd 配置...${NC}"
     CURRENT_PORT=$(grep -oP 'Environment=PORT=\K[0-9]+' "$SERVICE_FILE" 2>/dev/null || echo "38899")
     echo -e "${GREEN}当前端口: ${CURRENT_PORT}${NC}"
+    # 自愈：旧版本写的是 Restart=on-failure，升级时面板被 SIGTERM 杀掉后 systemd 不会拉起 → 卡死。
+    # 强制改成 Restart=always（CentOS7/systemd219 必需），保留其余配置不动。
+    if grep -q '^Restart=on-failure' "$SERVICE_FILE"; then
+        echo -e "${YELLOW}修复 systemd 重启策略: on-failure → always${NC}"
+        sed -i 's/^Restart=on-failure/Restart=always/' "$SERVICE_FILE"
+    fi
 else
     echo -e "${YELLOW}配置 systemd 服务 (端口: ${CURRENT_PORT})...${NC}"
     cat > "$SERVICE_FILE" << SVCEOF
@@ -317,8 +323,8 @@ User=root
 Group=root
 WorkingDirectory=/www/ai
 ExecStart=/www/ai/ai
-Restart=on-failure
-RestartSec=5
+Restart=always
+RestartSec=3
 StandardOutput=journal
 StandardError=journal
 
