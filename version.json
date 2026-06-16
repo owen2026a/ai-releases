@@ -1,1 +1,1 @@
-{"version":"1.4.95","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.4.95/ai","checksum":"sha256:47c6150648f8139417096d47c2af215dc16a4d837329745d1292bf9e23727973","changelog":"修复侧边栏未显示 Redis 管理入口（识别面板自有 ai-redis 实例）"}
+{"version":"1.4.96","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.4.96/ai","checksum":"sha256:28f2acbc900e37240ecccad51fb39bc2ff5b1a2467570c80bb7b5ae36bf00f59","changelog":"修复迁移站打开 Nginx 配置空白（读/存回退宝塔配置树）"}
