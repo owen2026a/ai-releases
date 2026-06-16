@@ -1,6 +1,6 @@
 {
-  "version": "1.4.83",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.83/ai",
-  "checksum": "sha256:6cecc4b35decf1d5d09032b32e6ee2edc654747f8a6a1bc6dcba9c25193a3448",
-  "changelog": "迁移修复：chown 解锁 .user.ini 不再整站失败；建站 status 列启动自愈；Redis 已运行时禁止装系统版顶替（防业务中断）"
+  "version": "1.4.84",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.84/ai",
+  "checksum": "sha256:491fa05e275ba43f3b97e31093e18458d3e017d96943a497638e9bfa8b926e47",
+  "changelog": "同机 Redis 蓝绿切换：面板 Redis 临时端口挂宝塔从库同步，追平后秒切 6379（运行时改端口不重载），近零中断、零数据丢失"
 }
