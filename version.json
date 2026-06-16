@@ -1,1 +1,1 @@
-{"version":"1.4.89","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.4.89/ai","checksum":"sha256:49363658a7b9be43e1809d971896660668bd64189174d0b769ca3475003e3a44","changelog":"紧急修复:停宝塔脚本(停Web/永久停用/退役)会误杀用宝塔prefix运行的面板OpenResty导致全站502,改为按/proc/PID/exe真实路径精确匹配只停/www/server下宝塔进程"}
+{"version":"1.4.90","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.4.90/ai","checksum":"sha256:bb38795313f630fef7d65e380a7414103ef8f3b865fd336d22b3269dc8d43c6a","changelog":"IP白名单一键加Cloudflare IP段；修复软件页Redis误报未安装、宝塔nginx状态显示未知"}
