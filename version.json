@@ -1,6 +1,1 @@
-{
-  "version": "1.4.86",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.86/ai",
-  "checksum": "sha256:d06b7a216b4ea2065ae0abeeb4ff2413565e6e09a0c5b602d3abbb9a0eaa6b6f",
-  "changelog": "修复迁移向导 uploadMeta 为 null 的未捕获异常导致按钮卡灰/点击无响应（影响蓝绿切换按钮）"
-}
+{"version":"1.4.87","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.4.87/ai","checksum":"sha256:17f5690bc666e5157d5291f4f80c005101217d20d43b5031dfaf89f433ff3e61","changelog":"修复迁移向导蓝绿/切换按钮空闲态被错误置灰不可点的问题"}
