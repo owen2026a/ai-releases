@@ -1,1 +1,1 @@
-{"version":"1.4.90","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.4.90/ai","checksum":"sha256:bb38795313f630fef7d65e380a7414103ef8f3b865fd336d22b3269dc8d43c6a","changelog":"IP白名单一键加Cloudflare IP段；修复软件页Redis误报未安装、宝塔nginx状态显示未知"}
+{"version":"1.4.91","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.4.91/ai","checksum":"sha256:6a4c16dad972ae31d7f5238f717fcc1059d137c2e4e4002c377aede06d5c81fa","changelog":"紧急修复升级后网站列表凭空消失（websites 表 created_at 丢列）；含 Cloudflare IP 白名单一键添加、软件页Redis/nginx状态修复"}
