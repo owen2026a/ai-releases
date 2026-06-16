@@ -1,1 +1,1 @@
-{"version":"1.4.91","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.4.91/ai","checksum":"sha256:6a4c16dad972ae31d7f5238f717fcc1059d137c2e4e4002c377aede06d5c81fa","changelog":"紧急修复升级后网站列表凭空消失（websites 表 created_at 丢列）；含 Cloudflare IP 白名单一键添加、软件页Redis/nginx状态修复"}
+{"version":"1.4.92","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.4.92/ai","checksum":"sha256:3bcd7f0f263e4ecdf5e11d05397076a8b6fc48ec3cb9e1276c35fa4eb7c7fbd3","changelog":"文件管理admin不限目录；PHP接管补齐session/wsdl/opcache目录归属www，修复迁移后站点登录CSRF失效"}
