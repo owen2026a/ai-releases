@@ -1,1 +1,1 @@
-{"version":"1.4.100","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.4.100/ai","checksum":"sha256:48134669d0d082626179de9e9f69b8aca5874d9610ec6b8a71bc1c89fd8df7a6","changelog":"CentOS7 安装/更新 OpenClaw 原生模块编译适配(Python3.11+devtoolset)"}
+{"version":"1.4.101","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.4.101/ai","checksum":"sha256:e58f2f1cfc6318d4ccbdff6f8d5215dfb243c760ecb92bf32af909b45e6aa40d","changelog":"木马检测降噪(PEM证书/第三方库识别)+后门特征加强+AI智能研判"}
