@@ -1,1 +1,1 @@
-{"version":"1.4.87","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.4.87/ai","checksum":"sha256:c1c64d613b4d9d8499e932facab1d8d78798fd701e897e4188313eadabafc1b9","changelog":"静态编译修复CentOS7启动失败；修复迁移向导蓝绿/切换按钮置灰不可点"}
+{"version":"1.4.88","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.4.88/ai","checksum":"sha256:0d1631a66b4e11a3f00edc9f05b7ee0d7dc9a17782efed27e7335d016ea07468","changelog":"修复切到本面板Web后业务停摆(OpenResty直接加载宝塔配置树,保留伪静态/SSL,自动回滚);新增面板PHP一键接管(装齐扩展+对齐ini+切php-fpm,失败回滚)"}
