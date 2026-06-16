@@ -1,1 +1,1 @@
-{"version":"1.4.87","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.4.87/ai","checksum":"sha256:17f5690bc666e5157d5291f4f80c005101217d20d43b5031dfaf89f433ff3e61","changelog":"修复迁移向导蓝绿/切换按钮空闲态被错误置灰不可点的问题"}
+{"version":"1.4.87","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.4.87/ai","checksum":"sha256:c1c64d613b4d9d8499e932facab1d8d78798fd701e897e4188313eadabafc1b9","changelog":"静态编译修复CentOS7启动失败；修复迁移向导蓝绿/切换按钮置灰不可点"}
