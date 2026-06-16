@@ -1,1 +1,1 @@
-{"version":"1.4.97","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.4.97/ai","checksum":"sha256:c8cbeff5b7523d955deb73422e4925c148975520f6bf6a69767275c80f1be306","changelog":"迁移站访问控制(IP白名单)生效修复 + 网站列表小屏适配"}
+{"version":"1.4.98","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.4.98/ai","checksum":"sha256:d12f849cdce3415f27a1af8d66c1f0b1f9d7a236ae16f387253870d9e9be0c0e","changelog":"修复编辑网站保存会清空 IP 白名单等高级设置"}
