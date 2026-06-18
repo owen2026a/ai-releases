@@ -1,1 +1,1 @@
-{"version":"1.4.102","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.4.102/ai","checksum":"sha256:cd8642d819e29ce83d0ae75106ef4f6ad5de1935d8a58bdf97393e4353b03dad","changelog":"迁移站配置保护(防502/丢伪静态)+查看配置修复+日志分析增强+日志自动维护"}
+{"version":"1.4.103","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.4.103/ai","checksum":"sha256:342b8bde1309c6b2c7ea9e01872c50d473bbc437c7e789c20da37f311d90239e","changelog":"磁盘大文件分析+今日流量统计+迁移漏站兜底修复+防火墙/系统优化/PHP配置加固"}
