@@ -1,1 +1,1 @@
-{"version":"1.4.104","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.4.104/ai","checksum":"sha256:506d35d82b68e56c0def99bbb33731212e6d117491fb7acf3d40e9ea44c12493","changelog":"修复启用/关闭两步验证(2FA)报 CSRF token 校验失败"}
+{"version":"1.4.104","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.4.104/ai","checksum":"sha256:fcf056164fb843d34563e416d995cdeb5da7513c9706d2aa71a26816a932f4e0","changelog":"修复启用/关闭两步验证(2FA)报 CSRF token 校验失败；改为静态编译(CGO_ENABLED=0)修复 CentOS 7 升级后起不来"}
