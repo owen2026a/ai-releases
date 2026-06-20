@@ -1,1 +1,1 @@
-{"version":"1.4.103","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.4.103/ai","checksum":"sha256:342b8bde1309c6b2c7ea9e01872c50d473bbc437c7e789c20da37f311d90239e","changelog":"磁盘大文件分析+今日流量统计+迁移漏站兜底修复+防火墙/系统优化/PHP配置加固"}
+{"version":"1.4.104","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.4.104/ai","checksum":"sha256:506d35d82b68e56c0def99bbb33731212e6d117491fb7acf3d40e9ea44c12493","changelog":"修复启用/关闭两步验证(2FA)报 CSRF token 校验失败"}
