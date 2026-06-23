@@ -1,1 +1,1 @@
-{"version":"1.4.105","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.4.105/ai","checksum":"sha256:c807d27604bef1c0b7861ffe1489221f9460dfe3eb16b062983ff50fa1db6604","changelog":"对标宝塔/1Panel 新增 8 大功能：云存储备份(S3/WebDAV)、系统快照、网站防篡改、进程守护、PHP扩展管理、Docker私有仓库、进程资源限额、应用商店扩容(26个应用)；并修复多项发版前审查发现的安全与健壮性问题"}
+{"version":"1.4.106","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.4.106/ai","checksum":"sha256:d2901a2e7c2bc819e8fbf07319c1e40dd63fccc811aa501ef1dd2daeddc522e9","changelog":"修复迁移站编辑绑定域名不生效(server_name 外科式更新)"}
