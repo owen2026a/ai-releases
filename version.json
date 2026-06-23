@@ -1,1 +1,1 @@
-{"version":"1.4.106","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.4.106/ai","checksum":"sha256:d2901a2e7c2bc819e8fbf07319c1e40dd63fccc811aa501ef1dd2daeddc522e9","changelog":"修复迁移站编辑绑定域名不生效(server_name 外科式更新)"}
+{"version":"1.4.107","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.4.107/ai","checksum":"sha256:53d725a3e9fe83a8e6caf8ae82f23b2057f303a665a434ec48381e85c601c554","changelog":"迁移站支持原地外科式编辑(端口/首页/PHP/SSL/伪静态/强制HTTPS)"}
