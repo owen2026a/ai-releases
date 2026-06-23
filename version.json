@@ -1,1 +1,1 @@
-{"version":"1.4.107","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.4.107/ai","checksum":"sha256:53d725a3e9fe83a8e6caf8ae82f23b2057f303a665a434ec48381e85c601c554","changelog":"迁移站支持原地外科式编辑(端口/首页/PHP/SSL/伪静态/强制HTTPS)"}
+{"version":"1.4.108","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.4.108/ai","checksum":"sha256:313a52ce64bf1edcf9717149d1bcd6a3f4e5a76ad50dd72d547f32270223626a","changelog":"OpenRouter 新增免费模型接口(只调免费版)；对齐各厂最新大模型: Claude Opus 4.8/Fable 5、Gemini 3.5 Flash、Grok 4.20、Qwen3.7、Kimi K2.7"}
