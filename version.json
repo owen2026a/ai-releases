@@ -1,1 +1,1 @@
-{"version":"1.4.111","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.4.111/ai","checksum":"sha256:69be0db3aa8f17f97c1d1275581c131c332f1c4b9f05160d2526f848ff12cb2d","changelog":"MySQL/Redis 远程访问(可改服务端端口+一键开外网,Redis强制密码)；防火墙 firewalld 来源IP显示与删除修复"}
+{"version":"1.4.112","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.4.112/ai","checksum":"sha256:63150608f1eb20cfd086dc1998c8b4a50a08603252beb6675123a7b3512dd90f","changelog":"MySQL 安装按所选版本装(不再写死)：RHEL/Debian 均直接写官方源按版本选仓库/组件，CentOS7 仅放行 8.0"}
