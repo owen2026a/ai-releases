@@ -1,1 +1,1 @@
-{"version":"1.4.126","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.4.126/ai","checksum":"sha256:426767adc22c71fbc41cd18899a5b83ef2644941dae332ff8bb153edd43d468d","changelog":"迁移工具与文件管理全链路安全加固；修复宝塔 MySQL/Redis 权限、远程终切一致性、Redis 蓝绿与文件路径安全问题。"}
+{"version":"1.4.127","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.4.127/ai","checksum":"sha256:947fb103b1445f3afa72e2d49333f5d75f558923500cea1361b8db66c35aeb20","changelog":"磁盘大文件分析「大小」列可点击排序（降序↓/升序↑切换，默认最大在前，重扫描重置）。一并包含此前未发布的 hermes 终端重连风暴与 CentOS 兼容修复。"}
