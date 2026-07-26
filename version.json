@@ -1,6 +1,6 @@
 {
-  "version": "1.4.161",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.161/ai",
-  "checksum": "sha256:1b770fd2e71597823c41b30f4e469ebefd7d0173aba37dc0b3e9c763f81d84b8",
-  "changelog": "Web 终端多标签；修复 PTY 输出被静默吞掉与会话超限无提示"
+  "version": "1.4.162",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.162/ai",
+  "checksum": "sha256:f49193ba90ca87f5f1860a935f36fc127655e6db2390650b213c0fca842d0122",
+  "changelog": "修复应用商店日志接口路径穿越；docker/应用商店命令补超时与 WaitDelay"
 }
