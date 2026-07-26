@@ -1,6 +1,6 @@
 {
-  "version": "1.4.160",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.160/ai",
-  "checksum": "sha256:eae77c43f7fbe5bdff1ac9574ac7ce0be2bed69f953a80a230f0e685da8b1a83",
-  "changelog": "修复 MariaDB 上「立即备份」100% 失败；新增 binlog 管理与备份保留策略"
+  "version": "1.4.161",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.161/ai",
+  "checksum": "sha256:1b770fd2e71597823c41b30f4e469ebefd7d0173aba37dc0b3e9c763f81d84b8",
+  "changelog": "Web 终端多标签；修复 PTY 输出被静默吞掉与会话超限无提示"
 }
