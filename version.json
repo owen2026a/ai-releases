@@ -1,6 +1,6 @@
 {
-  "version": "1.4.164",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.164/ai",
-  "checksum": "sha256:a98d4703327ded2850da08ef44e010fe1f7e3774899778017fb9b3b19af1ae62",
-  "changelog": "Docker 页大屏收窄与表格列隐藏；全站暗色彩色底覆盖从 8 种补到 48 种"
+  "version": "1.4.165",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.165/ai",
+  "checksum": "sha256:dd569a5cab416112511d779a90c6927a9e8534c484bed259721013ee398e61ac",
+  "changelog": "应用商店：更新应用、镜像版本可控、端口占用预检、装完给可点的访问地址"
 }
