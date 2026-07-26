@@ -1,6 +1,6 @@
 {
-  "version": "1.4.162",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.162/ai",
-  "checksum": "sha256:f49193ba90ca87f5f1860a935f36fc127655e6db2390650b213c0fca842d0122",
-  "changelog": "修复应用商店日志接口路径穿越；docker/应用商店命令补超时与 WaitDelay"
+  "version": "1.4.163",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.163/ai",
+  "checksum": "sha256:d87802786b8eea893d371f76490ba6088d420abf98c7eadf29ae611966f06970",
+  "changelog": "Compose v1/v2 自适应（只装 v1 的机器不再全线失败）+ podman 识别 + sudo 收口"
 }
