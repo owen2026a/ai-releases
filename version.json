@@ -1,6 +1,6 @@
 {
-  "version": "1.4.165",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.165/ai",
-  "checksum": "sha256:dd569a5cab416112511d779a90c6927a9e8534c484bed259721013ee398e61ac",
-  "changelog": "应用商店：更新应用、镜像版本可控、端口占用预检、装完给可点的访问地址"
+  "version": "1.4.166",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.166/ai",
+  "checksum": "sha256:d3680c21c7954fffaf033bd441fa5d27867fe2eee0eed4b5651c29759c9b5c45",
+  "changelog": "应用商店并入 Docker 管理，成为一个 tab；旧地址 /app-store 自动跳转"
 }
