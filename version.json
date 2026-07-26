@@ -1,6 +1,6 @@
 {
-  "version": "1.4.166",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.166/ai",
-  "checksum": "sha256:d3680c21c7954fffaf033bd441fa5d27867fe2eee0eed4b5651c29759c9b5c45",
-  "changelog": "应用商店并入 Docker 管理，成为一个 tab；旧地址 /app-store 自动跳转"
+  "version": "1.4.167",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.167/ai",
+  "checksum": "sha256:dd7fea7775962a0e49894be45107edf19766a2911ce5e88a55ab3384f9aa7655",
+  "changelog": "侧栏去掉「应用商店」独立入口（并入 Docker 管理后残留，且会导致两条菜单同时高亮）"
 }
