@@ -1,6 +1,6 @@
 {
-  "version": "1.4.159",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.159/ai",
-  "checksum": "sha256:736f6c76926fc2e37a2814b0e0c437ba62fbe8ecad7f8e21e1151a5f48086287",
-  "changelog": "修复域名续费后到期提醒永久静默；批量NS失败项一键重试 + 结果导出CSV"
+  "version": "1.4.160",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.160/ai",
+  "checksum": "sha256:eae77c43f7fbe5bdff1ac9574ac7ce0be2bed69f953a80a230f0e685da8b1a83",
+  "changelog": "修复 MariaDB 上「立即备份」100% 失败；新增 binlog 管理与备份保留策略"
 }
