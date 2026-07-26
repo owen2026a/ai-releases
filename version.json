@@ -1,6 +1,6 @@
 {
-  "version": "1.4.163",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.163/ai",
-  "checksum": "sha256:d87802786b8eea893d371f76490ba6088d420abf98c7eadf29ae611966f06970",
-  "changelog": "Compose v1/v2 自适应（只装 v1 的机器不再全线失败）+ podman 识别 + sudo 收口"
+  "version": "1.4.164",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.164/ai",
+  "checksum": "sha256:a98d4703327ded2850da08ef44e010fe1f7e3774899778017fb9b3b19af1ae62",
+  "changelog": "Docker 页大屏收窄与表格列隐藏；全站暗色彩色底覆盖从 8 种补到 48 种"
 }
