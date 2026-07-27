@@ -1,6 +1,6 @@
 {
-  "version": "1.4.172",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.172/ai",
-  "checksum": "sha256:2e1028579dbcdd841325d7211648aa29242e369042e7c2f625910e992a261db3",
-  "changelog": "面板IP证书/Web服务器/系统优化三页补 max-w 超宽屏居中；修复 4 张表格在窄屏把中文按钮压成竖排；7 个弹窗在手机横屏下内容够不着底部，补 max-h；13 个弹窗支持 ESC 关闭"
+  "version": "1.4.173",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.173/ai",
+  "checksum": "sha256:caf1f7b4e42d3670a2fef8af093859c9cadb3b277bc370a04910e73e2496a46e",
+  "changelog": "面板证书支持上传已有证书（商业证书/企业内网CA/acme.sh 签好的），安装前完整校验私钥配对与有效期，不需重启即生效；Web服务器切换的迁移报告改为落库保存并在页面上可查，重启后不再丢失"
 }
