@@ -1,6 +1,6 @@
 {
-  "version": "1.4.169",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.169/ai",
-  "checksum": "sha256:34137e4973a7fe0858729f0af7ac204e25eb32fb70c55fc4883ea5f9f97b7b15",
-  "changelog": "应用商店清单 25 → 53：补齐 MySQL/PostgreSQL/Redis/MongoDB 等真实数据库，各分类扩充"
+  "version": "1.4.170",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.170/ai",
+  "checksum": "sha256:3081445a65f67f27ecca9640ec52f363c8177d8da06061ff00dc321afab3cd55",
+  "changelog": "面板端口修改加占用预检（避免锁在门外）；9 处可预测 /tmp 文件名收口；迁移报告加锁"
 }
