@@ -1,6 +1,6 @@
 {
-  "version": "1.4.170",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.170/ai",
-  "checksum": "sha256:3081445a65f67f27ecca9640ec52f363c8177d8da06061ff00dc321afab3cd55",
-  "changelog": "面板端口修改加占用预检（避免锁在门外）；9 处可预测 /tmp 文件名收口；迁移报告加锁"
+  "version": "1.4.171",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.171/ai",
+  "checksum": "sha256:4aaf04234f6c96945f2b6d30a9adeb617a9545e85ff9bfeda2bd6749523fd1e3",
+  "changelog": "sysctl 参数逐项探测与应用后回读校验（容器/老内核不再整批误报）；BBR 按内核实际支持决定，不支持时回退 cubic；自签证书有效期改为 800 天以符合 Apple 825 天上限，并在剩余不足 30 天时自动重签"
 }
