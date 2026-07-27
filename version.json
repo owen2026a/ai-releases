@@ -1,6 +1,6 @@
 {
-  "version": "1.4.168",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.168/ai",
-  "checksum": "sha256:9d62c953f91579eca6fcca453968f690aa2e070dc025e49ccf7befa18445c734",
-  "changelog": "新增操作日志页（审计记录此前只写不读）；result 列写入端收口 + 保留策略"
+  "version": "1.4.169",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.169/ai",
+  "checksum": "sha256:34137e4973a7fe0858729f0af7ac204e25eb32fb70c55fc4883ea5f9f97b7b15",
+  "changelog": "应用商店清单 25 → 53：补齐 MySQL/PostgreSQL/Redis/MongoDB 等真实数据库，各分类扩充"
 }
