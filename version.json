@@ -1,6 +1,6 @@
 {
-  "version": "1.4.176",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.176/ai",
-  "checksum": "sha256:8e21b1e31fb965590dba7aaa81d7832c64f1c5ee3db22152393e2a1775f8af7c",
-  "changelog": "PHP配置/CDN管理/防火墙三页超宽屏内容居中；CDN 列表在手机上按钮不再竖排换行；CDN 弹窗支持 ESC 关闭；防火墙 SSH 开关暗色模式适配"
+  "version": "1.4.177",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.177/ai",
+  "checksum": "sha256:5326e275bc4a7029600756c1e017bad75e805ff3c80403dc3e8b460a7598d440",
+  "changelog": "PHP 新增 opcache 面板（真实 FPM 命中率/内存/参数）与 disable_functions 安全加固；防火墙新增常用端口一键放行与禁 ping 开关；CDN 新增 URL 预热（阿里/腾讯）并在保存时校验必填凭据"
 }
