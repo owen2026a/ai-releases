@@ -1,6 +1,6 @@
 {
-  "version": "1.4.174",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.174/ai",
-  "checksum": "sha256:705ed195875e70e858dc0a5aa7ca9f2a507a95a85f1f5f40b35d5bb6048bf34e",
-  "changelog": "CDN 编辑不再清掉留空的密钥字段；防火墙修复 ufw 带来源IP规则语法、端口范围格式两家防火墙互通、删除规则的过期编号保护与 IPv6 孪生规则清理；PHP 修复 8.4/8.5 扩展安装报版本无效及一处临时文件安全隐患"
+  "version": "1.4.175",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.175/ai",
+  "checksum": "sha256:fcc2fc821433a332c54cb33f4b85f12188820de3a38b78c9cd9582febd2b5679",
+  "changelog": "PHP 版本按安装状态展示（FPM 停止不再消失）并新增 FPM 启停/重启按钮；RHEL 原生 php-fpm（非 remi）路径自动适配；防火墙规则列表显示 ufw 注释与 LIMIT 限速规则，添加规则支持填写注释"
 }
