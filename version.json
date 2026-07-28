@@ -1,6 +1,6 @@
 {
-  "version": "1.4.175",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.175/ai",
-  "checksum": "sha256:fcc2fc821433a332c54cb33f4b85f12188820de3a38b78c9cd9582febd2b5679",
-  "changelog": "PHP 版本按安装状态展示（FPM 停止不再消失）并新增 FPM 启停/重启按钮；RHEL 原生 php-fpm（非 remi）路径自动适配；防火墙规则列表显示 ufw 注释与 LIMIT 限速规则，添加规则支持填写注释"
+  "version": "1.4.176",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.176/ai",
+  "checksum": "sha256:8e21b1e31fb965590dba7aaa81d7832c64f1c5ee3db22152393e2a1775f8af7c",
+  "changelog": "PHP配置/CDN管理/防火墙三页超宽屏内容居中；CDN 列表在手机上按钮不再竖排换行；CDN 弹窗支持 ESC 关闭；防火墙 SSH 开关暗色模式适配"
 }
