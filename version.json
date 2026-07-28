@@ -1,6 +1,6 @@
 {
-  "version": "1.4.182",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.182/ai",
-  "checksum": "sha256:1e4993f318c92df20d15a737e7de910417b8284a5ab367ee1068cd217b0e89dd",
-  "changelog": "安全批：补全 AI 巡检/指标的权限门控（原本任意登录用户可触发付费 AI 调用）；修复 8 处「勾掉启用却建成启用」；服务名写错不再无限重启刷屏"
+  "version": "1.4.183",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.183/ai",
+  "checksum": "sha256:bec09bf541be0930e26bb04c6dcd18720c7e2b6830b0bcd22202115b2c12789a",
+  "changelog": "数据库写入提速 560 倍并修复快照恢复静默失效；AI 调用指标补齐全部入口（原来只统计 1/7）并新增 token 用量与费用估算；新增通知发送历史；修复渠道测试失败时密钥明文落库"
 }
