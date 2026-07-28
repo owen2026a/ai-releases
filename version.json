@@ -1,6 +1,6 @@
 {
-  "version": "1.4.178",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.178/ai",
-  "checksum": "sha256:4aeb0c31ba61db0dbff2aa02ba00d6e0561f2b84b35409b280183e69c8b516ee",
-  "changelog": "安全修复：清除数据库远程访问、图床、网站部署/上传/权限/防护、Web服务器主配置等模块中 9 处可预测的临时文件路径，防止面板以 root 运行时被符号链接抢占导致任意文件写入"
+  "version": "1.4.179",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.179/ai",
+  "checksum": "sha256:8c6163fcd390572a510d5e4c972c29cb847b05d509cae7366ac11455de7d6c7d",
+  "changelog": "重要修复：计划任务的任何编辑操作此前会抹掉 crontab 里的环境变量、注释和 @reboot 开机自启任务（含证书自动续期），已改为逐行保序编辑并加写前自动备份；禁用后的任务不再消失且可正常启用回来；监控告警此前触发后永不自动恢复导致同一规则第二次告警永远不来，已修"
 }
