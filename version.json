@@ -1,6 +1,6 @@
 {
-  "version": "1.4.179",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.179/ai",
-  "checksum": "sha256:8c6163fcd390572a510d5e4c972c29cb847b05d509cae7366ac11455de7d6c7d",
-  "changelog": "重要修复：计划任务的任何编辑操作此前会抹掉 crontab 里的环境变量、注释和 @reboot 开机自启任务（含证书自动续期），已改为逐行保序编辑并加写前自动备份；禁用后的任务不再消失且可正常启用回来；监控告警此前触发后永不自动恢复导致同一规则第二次告警永远不来，已修"
+  "version": "1.4.181",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.181/ai",
+  "checksum": "sha256:07dfc4897ac6c6efd821ce234e4605ef6c04bb57b980e94f8ff622de824a0271",
+  "changelog": "重要修复：v1.4.179 引入的计划任务编辑问题——命令中含 # 或连续空格时（如数据库密码、URL、sed 表达式）编辑会改坏命令，编辑/删除任务还会误改上方的 Ansible/Puppet 标记行与系统模板注释；监控告警现可推送到钉钉/邮件/飞书/Telegram/企业微信渠道；进程守护支持编辑；新增计划任务下次执行时间预览"
 }
