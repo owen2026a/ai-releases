@@ -1,6 +1,6 @@
 {
-  "version": "1.4.181",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.181/ai",
-  "checksum": "sha256:07dfc4897ac6c6efd821ce234e4605ef6c04bb57b980e94f8ff622de824a0271",
-  "changelog": "重要修复：v1.4.179 引入的计划任务编辑问题——命令中含 # 或连续空格时（如数据库密码、URL、sed 表达式）编辑会改坏命令，编辑/删除任务还会误改上方的 Ansible/Puppet 标记行与系统模板注释；监控告警现可推送到钉钉/邮件/飞书/Telegram/企业微信渠道；进程守护支持编辑；新增计划任务下次执行时间预览"
+  "version": "1.4.182",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.182/ai",
+  "checksum": "sha256:1e4993f318c92df20d15a737e7de910417b8284a5ab367ee1068cd217b0e89dd",
+  "changelog": "安全批：补全 AI 巡检/指标的权限门控（原本任意登录用户可触发付费 AI 调用）；修复 8 处「勾掉启用却建成启用」；服务名写错不再无限重启刷屏"
 }
