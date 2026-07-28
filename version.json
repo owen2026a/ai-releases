@@ -1,6 +1,6 @@
 {
-  "version": "1.4.177",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.177/ai",
-  "checksum": "sha256:5326e275bc4a7029600756c1e017bad75e805ff3c80403dc3e8b460a7598d440",
-  "changelog": "PHP 新增 opcache 面板（真实 FPM 命中率/内存/参数）与 disable_functions 安全加固；防火墙新增常用端口一键放行与禁 ping 开关；CDN 新增 URL 预热（阿里/腾讯）并在保存时校验必填凭据"
+  "version": "1.4.178",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.178/ai",
+  "checksum": "sha256:4aeb0c31ba61db0dbff2aa02ba00d6e0561f2b84b35409b280183e69c8b516ee",
+  "changelog": "安全修复：清除数据库远程访问、图床、网站部署/上传/权限/防护、Web服务器主配置等模块中 9 处可预测的临时文件路径，防止面板以 root 运行时被符号链接抢占导致任意文件写入"
 }
