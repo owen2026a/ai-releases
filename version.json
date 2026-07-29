@@ -1,6 +1,6 @@
 {
-  "version": "1.4.187",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.187/ai",
-  "checksum": "sha256:1f5b03e2297a8f5571b253ef4f4b94bebb5eadc9951f1b821f9c091cd8d7f17a",
-  "changelog": "备份与快照打包前先检查磁盘空间，避免写出半截的包（检查刻意保守，估不准时放行以免误拦正常备份）；进程守护在非 systemd 系统上明确提示不可用并给出替代方案"
+  "version": "1.4.188",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.188/ai",
+  "checksum": "sha256:31b336e8c59f3e62dcd892a920645c105cf562a36964986a1a273ff98a46adb5",
+  "changelog": "备份失败会通过通知渠道告警（此前只写日志，「悄悄失败三个月」无人知晓）；上传前校验归档能否读通并记录 SHA256；快照新增保留份数策略避免占满磁盘；进程守护显示内存/CPU/重启次数"
 }
