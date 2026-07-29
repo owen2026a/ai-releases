@@ -1,6 +1,6 @@
 {
-  "version": "1.4.186",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.186/ai",
-  "checksum": "sha256:f5ce37045069fb0af6adfe1a0a6308280b599ce6d95689f7a7988e99b5cf63ea",
-  "changelog": "界面修复：定时备份页 8 个按钮在手机(360px)和平板(768px)上被裁掉点不到；同页 8 处中文被压成竖排；定时备份与系统快照两页大屏内容拉满已限宽；备份的两个弹窗补 ESC 关闭"
+  "version": "1.4.187",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.187/ai",
+  "checksum": "sha256:1f5b03e2297a8f5571b253ef4f4b94bebb5eadc9951f1b821f9c091cd8d7f17a",
+  "changelog": "备份与快照打包前先检查磁盘空间，避免写出半截的包（检查刻意保守，估不准时放行以免误拦正常备份）；进程守护在非 systemd 系统上明确提示不可用并给出替代方案"
 }
