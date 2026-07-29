@@ -1,6 +1,6 @@
 {
-  "version": "1.4.183",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.183/ai",
-  "checksum": "sha256:bec09bf541be0930e26bb04c6dcd18720c7e2b6830b0bcd22202115b2c12789a",
-  "changelog": "数据库写入提速 560 倍并修复快照恢复静默失效；AI 调用指标补齐全部入口（原来只统计 1/7）并新增 token 用量与费用估算；新增通知发送历史；修复渠道测试失败时密钥明文落库"
+  "version": "1.4.184",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.184/ai",
+  "checksum": "sha256:9cdb1324357b663786e6e65a70e2c05657206d37b31948c514fc509961f03f2e",
+  "changelog": "修复服务自愈页在手机上 6 个按钮点不到、22 处中文竖排；6 个弹窗补 ESC 关闭；服务自愈支持从系统选服务名、自定义健康检查命令、非 systemd 系统明确提示；巡检报告可单独删除导出"
 }
