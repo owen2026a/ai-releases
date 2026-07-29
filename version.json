@@ -1,6 +1,6 @@
 {
-  "version": "1.4.184",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.184/ai",
-  "checksum": "sha256:9cdb1324357b663786e6e65a70e2c05657206d37b31948c514fc509961f03f2e",
-  "changelog": "修复服务自愈页在手机上 6 个按钮点不到、22 处中文竖排；6 个弹窗补 ESC 关闭；服务自愈支持从系统选服务名、自定义健康检查命令、非 systemd 系统明确提示；巡检报告可单独删除导出"
+  "version": "1.4.185",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.185/ai",
+  "checksum": "sha256:f615f3c4b849de0efc8203098d298341c58a65f7a806dadf1ce1de281949758a",
+  "changelog": "🔴 安全修复：定时备份接口此前无权限校验，任意登录账号可新建备份目标并把 /www/ai/data（含主加密密钥、账号密码哈希、2FA 密钥）打包推送到自己的云存储；备份目标的云存储密钥此前明文下发，现改为 **** 显示；补齐备份操作审计日志；同一备份任务不再被并发执行"
 }
