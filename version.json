@@ -1,6 +1,6 @@
 {
-  "version": "1.4.188",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.188/ai",
-  "checksum": "sha256:31b336e8c59f3e62dcd892a920645c105cf562a36964986a1a273ff98a46adb5",
-  "changelog": "备份失败会通过通知渠道告警（此前只写日志，「悄悄失败三个月」无人知晓）；上传前校验归档能否读通并记录 SHA256；快照新增保留份数策略避免占满磁盘；进程守护显示内存/CPU/重启次数"
+  "version": "1.4.189",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.189/ai",
+  "checksum": "sha256:c1051ae34363728437cf87bbdd62c877a5a2cc1be54a38c4f192030c73915da9",
+  "changelog": "修复 Hermes Agent 更新按钮点不动（面板查 GitHub 看到新版、却从 PyPI 下载，而新版没发到 PyPI）：常规通道拿不到时回退官方安装脚本；升级失败不再谎报「升级完成」"
 }
