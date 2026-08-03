@@ -1,6 +1,6 @@
 {
-  "version": "1.4.189",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.189/ai",
-  "checksum": "sha256:c1051ae34363728437cf87bbdd62c877a5a2cc1be54a38c4f192030c73915da9",
-  "changelog": "修复 Hermes Agent 更新按钮点不动（面板查 GitHub 看到新版、却从 PyPI 下载，而新版没发到 PyPI）：常规通道拿不到时回退官方安装脚本；升级失败不再谎报「升级完成」"
+  "version": "1.4.190",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.190/ai",
+  "checksum": "sha256:20d72a2e671939708b608326f5f12d5b26caca61ba1dacafd9b2c19a175ae780",
+  "changelog": "修复 Hermes 升级已成功却报「更新失败」：机器上有多份安装时，PATH 上的旧版会挡住新装的；现在按版本号挑最新的一份，并在应用商店明示是哪份挡住了、该删哪个"
 }
