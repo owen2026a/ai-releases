@@ -1,6 +1,6 @@
 {
-  "version": "1.4.191",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.191/ai",
-  "checksum": "sha256:f12612bf3334c0b6376d6b8ec06069a8fa66ddf0c4638573affe57597efc5dc5",
-  "changelog": "Hermes 更新更快：已知 PyPI 上没有目标版本时不再白跑 pip/uv/pipx 四条通道（还可能装回更旧的版本）；新增「有旧版本残留」提醒，避免面板显示新版而终端里仍是旧版"
+  "version": "1.4.192",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.192/ai",
+  "checksum": "sha256:7b9ad160d37095c294d00a88c50908c0c1ef16dc7381f949d5eb6a52ee9a2648",
+  "changelog": "OpenClaw 更新按版本号判定成败而不是退出码：npm update 遇大版本会原地踏步却正常退出，导致兜底不触发且仍显示「更新完成」；跨年 2026.x→2027.x 最易踩到"
 }
