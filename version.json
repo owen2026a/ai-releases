@@ -1,6 +1,6 @@
 {
-  "version": "1.4.199",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.199/ai",
-  "checksum": "sha256:9db6a1a29a9adcfede2e778f65e6b62cd008afe579e90112daaddbc0ce2ed494",
-  "changelog": "CDN 集群：模式 A 文件同步（mtime 增量 + 开启前适用性拦截 + 防篡改协调）"
+  "version": "1.4.200",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.200/ai",
+  "checksum": "sha256:c5dffe29542c24ecc429486ceda5d382d15214c134494059205fbd4de01865d9",
+  "changelog": "CDN 集群：修复边缘上几项从未真正生效的功能（防盗链致图片全404/会话泄露/站点撞名/假回滚/清缓存假成功）+ 网站管理里的集群入口 + 前缀通配清缓存 + 自定义响应头与 CORS"
 }
