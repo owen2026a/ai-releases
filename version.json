@@ -1,6 +1,6 @@
 {
-  "version": "1.4.200",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.200/ai",
-  "checksum": "sha256:c5dffe29542c24ecc429486ceda5d382d15214c134494059205fbd4de01865d9",
-  "changelog": "CDN 集群：修复边缘上几项从未真正生效的功能（防盗链致图片全404/会话泄露/站点撞名/假回滚/清缓存假成功）+ 网站管理里的集群入口 + 前缀通配清缓存 + 自定义响应头与 CORS"
+  "version": "1.4.201",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.201/ai",
+  "checksum": "sha256:e096841c0e8c67cb1846b9e90179f6b0d5aedb310108d87e64dbdcc1c6071fca",
+  "changelog": "修复集群管理页打不开（打开只有「未指定页面内容」，从 v1.4.193 起就是坏的）；顺带修 OpenClaw 外部访问页与验证页的同一个漏接"
 }
