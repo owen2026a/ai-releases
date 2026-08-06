@@ -1,6 +1,6 @@
 {
-  "version": "1.4.197",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.197/ai",
-  "checksum": "sha256:e53f8575f62a2973ed60b204f0234089af36dd083f3884f7958ec7a6e9af1651",
-  "changelog": "集群第 5 批：版本矩阵（各节点 vs 主控，拿不到版本标「未知」而非「一致」）；滚动升级 —— 逐台摘解析→等流量降完→升级→健康检查→加回，全程零停机；任何一台失败立即停止且不把状态不明的节点放回解析"
+  "version": "1.4.198",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.198/ai",
+  "checksum": "sha256:e7dfd903337dd018d65747c94e5a9a56304c6b183f0500c7da4c9a5d9a57c92a",
+  "changelog": "集群第 6 批：边缘节点访问指标聚合上报（请求数/流量/缓存命中率/状态码），全集群合并视图 + 按节点拆分；节点离线本地缓冲、恢复后补报且不重复计数；原始日志留在节点按需远程查询；无数据与 0% 明确区分、数据迟到如实标注"
 }
