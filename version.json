@@ -1,6 +1,6 @@
 {
-  "version": "1.4.192",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.192/ai",
-  "checksum": "sha256:7b9ad160d37095c294d00a88c50908c0c1ef16dc7381f949d5eb6a52ee9a2648",
-  "changelog": "OpenClaw 更新按版本号判定成败而不是退出码：npm update 遇大版本会原地踏步却正常退出，导致兜底不触发且仍显示「更新完成」；跨年 2026.x→2027.x 最易踩到"
+  "version": "1.4.193",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.193/ai",
+  "checksum": "sha256:e18451c0b65ba3e66f3a2b7e7b3707777ada33c39311bd2157f77a97ea3f2cb8",
+  "changelog": "新模块「集群管理」（CDN 集群第 1 批）：节点配对（一次性配对码+密钥加密交换+防火墙自动放行）、心跳与资源监控（CPU/内存/磁盘/带宽）、SSO 免登进入节点面板（一次性票据+可禁用）、全链路签名防重放"
 }
