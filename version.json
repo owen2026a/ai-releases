@@ -1,6 +1,6 @@
 {
-  "version": "1.4.203",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.203/ai",
-  "checksum": "sha256:5a999c9cc24c9e114838999947cfca7a4ec40e64e6df01c384e5f8f4b127b9f9",
-  "changelog": "补上「网站管理里选域名服务商账号做 DNS 自动调度」的入口（功能 v1.4.196 就做完了，一直没有界面）"
+  "version": "1.4.204",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.204/ai",
+  "checksum": "sha256:d258dde7cd3468baef5f4f38cef47d387b47ea105aaed54fe21b36cdbda3d91c",
+  "changelog": "全局 WAF 保存后一直不生效（假的安全承诺）；GoDaddy 删解析可能清空同名整组；用户删除按钮/站点退出集群/软件管理链接三处点了报错"
 }
