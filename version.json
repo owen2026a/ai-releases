@@ -1,6 +1,6 @@
 {
-  "version": "1.4.207",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.207/ai",
-  "checksum": "sha256:e4b7b4c2ea61d646170a66389427ee376a3ce3daa8b9d22c2e098a9ad4dd7073",
-  "changelog": "OpenClaw 会话历史 + AI 对话流式显示 + 历史迁移包管理"
+  "version": "1.4.208",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.208/ai",
+  "checksum": "sha256:633ce7c26ef18a0eb74f58e9c9df11d7e5f5c6ba3b3ff47f1095de2fbaa619ac",
+  "changelog": "修复节点维护状态的假安全信号 + 流量趋势曲线 + 逐节点同步明细 + 按节点滚动升级"
 }
