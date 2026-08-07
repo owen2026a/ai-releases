@@ -1,6 +1,6 @@
 {
-  "version": "1.4.206",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.206/ai",
-  "checksum": "sha256:253c03a4fab57644bc5206fab79c34f3bc6c512916767358967887bcb3f81e16",
-  "changelog": "补六处「功能做完了但界面上点不到」：cron 下次执行预览、日志切割归档与错误日志、集群立即对账、AI用量与通知历史的保留天数、系统优化单项应用"
+  "version": "1.4.207",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.207/ai",
+  "checksum": "sha256:e4b7b4c2ea61d646170a66389427ee376a3ce3daa8b9d22c2e098a9ad4dd7073",
+  "changelog": "OpenClaw 会话历史 + AI 对话流式显示 + 历史迁移包管理"
 }
