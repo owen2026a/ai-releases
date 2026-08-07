@@ -1,6 +1,6 @@
 {
-  "version": "1.4.205",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.205/ai",
-  "checksum": "sha256:3304c8b97ce987f6392ced0ffcebdff19524cb7b95fbbcba0634934e55ed82c5",
-  "changelog": "CDN 集群「文件同步型」这一整档从来就不可用（下发过滤/节点无记录/不生成配置三处全断），现已打通；安全策略两种模式共用"
+  "version": "1.4.206",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.206/ai",
+  "checksum": "sha256:253c03a4fab57644bc5206fab79c34f3bc6c512916767358967887bcb3f81e16",
+  "changelog": "补六处「功能做完了但界面上点不到」：cron 下次执行预览、日志切割归档与错误日志、集群立即对账、AI用量与通知历史的保留天数、系统优化单项应用"
 }
