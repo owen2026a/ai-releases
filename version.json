@@ -1,6 +1,6 @@
 {
-  "version": "1.4.202",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.202/ai",
-  "checksum": "sha256:b89ca9d55541aff7d70b0581c2fae0a144fd462b05ae290da733af618b59d35e",
-  "changelog": "CDN 集群：边缘限流 + 源站只接受边缘回源（两者捆绑，单做限流会被直连源站绕过）+ 缓存预热（以「再请求一次命中缓存」为成功判据）"
+  "version": "1.4.203",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.203/ai",
+  "checksum": "sha256:5a999c9cc24c9e114838999947cfca7a4ec40e64e6df01c384e5f8f4b127b9f9",
+  "changelog": "补上「网站管理里选域名服务商账号做 DNS 自动调度」的入口（功能 v1.4.196 就做完了，一直没有界面）"
 }
