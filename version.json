@@ -1,6 +1,6 @@
 {
-  "version": "1.4.208",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.208/ai",
-  "checksum": "sha256:633ce7c26ef18a0eb74f58e9c9df11d7e5f5c6ba3b3ff47f1095de2fbaa619ac",
-  "changelog": "修复节点维护状态的假安全信号 + 流量趋势曲线 + 逐节点同步明细 + 按节点滚动升级"
+  "version": "1.4.209",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.209/ai",
+  "checksum": "sha256:7f32d2fe43ee343bb81a8f8781e90b3f58def38ce95ff5a73817f3117ac73944",
+  "changelog": "域名手动续费 + 修正「自动续费」的误导性显示 + 清理死代码与空列"
 }
