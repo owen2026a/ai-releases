@@ -1,6 +1,6 @@
 {
-  "version": "1.4.210",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.210/ai",
-  "checksum": "sha256:f9567fad3724c3dadbe45e54f866674e8634c2c3a7eae27cfbb4b610224ae451",
-  "changelog": "修复搜索在正常使用下完全不生效 + DNS/用户/文件搜索七处「搜不到明明存在的东西」"
+  "version": "1.4.211",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.211/ai",
+  "checksum": "sha256:de69a5bd3b2ca2728459b069c857e290490df3e7134fbcb88f8958c895d9b8a1",
+  "changelog": "编辑器替换会改错内容 + 正则搜索无效 + DNS编辑表单空白 + 四处「失败」被显示成「没结果」"
 }
