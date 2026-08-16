@@ -1,6 +1,6 @@
 {
-  "version": "1.4.209",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.209/ai",
-  "checksum": "sha256:7f32d2fe43ee343bb81a8f8781e90b3f58def38ce95ff5a73817f3117ac73944",
-  "changelog": "域名手动续费 + 修正「自动续费」的误导性显示 + 清理死代码与空列"
+  "version": "1.4.210",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.210/ai",
+  "checksum": "sha256:f9567fad3724c3dadbe45e54f866674e8634c2c3a7eae27cfbb4b610224ae451",
+  "changelog": "修复搜索在正常使用下完全不生效 + DNS/用户/文件搜索七处「搜不到明明存在的东西」"
 }
