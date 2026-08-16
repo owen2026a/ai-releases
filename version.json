@@ -1,6 +1,6 @@
 {
-  "version": "1.4.211",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.211/ai",
-  "checksum": "sha256:de69a5bd3b2ca2728459b069c857e290490df3e7134fbcb88f8958c895d9b8a1",
-  "changelog": "编辑器替换会改错内容 + 正则搜索无效 + DNS编辑表单空白 + 四处「失败」被显示成「没结果」"
+  "version": "1.4.212",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.212/ai",
+  "checksum": "sha256:a84ded66f6bb6d3b83497387eec367bef39dc562aa50d0c50bb11b1bf9c67d39",
+  "changelog": "集群模块全链路审计：修复流量统计失效/默认回源自环/停用不清理/源站配置互踩等七处断链，协议版本升至 v2（主控与节点需同版本）"
 }
