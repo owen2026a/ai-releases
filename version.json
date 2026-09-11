@@ -1,6 +1,6 @@
 {
-  "version": "1.4.214",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.214/ai",
-  "checksum": "sha256:10e20091396ff60c1335b2edbb32ab4561e0dc932511f24116df02185802a448",
-  "changelog": "修复 OpenClaw 升级时 Node 被其它软件自带版本遮蔽导致的「装好了却说没装」"
+  "version": "1.4.215",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.215/ai",
+  "checksum": "sha256:29af0a7a954a83c415dfa55ca54d9e306505fed8c4e28c6996c395e9519a8fc9",
+  "changelog": "撤回 v1.4.214 会写坏系统 npm 软链的做法 + 修复频道插件更新把失败报成成功"
 }
