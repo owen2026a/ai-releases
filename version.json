@@ -1,6 +1,6 @@
 {
-  "version": "1.4.215",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.215/ai",
-  "checksum": "sha256:29af0a7a954a83c415dfa55ca54d9e306505fed8c4e28c6996c395e9519a8fc9",
-  "changelog": "撤回 v1.4.214 会写坏系统 npm 软链的做法 + 修复频道插件更新把失败报成成功"
+  "version": "1.4.216",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.216/ai",
+  "checksum": "sha256:a279dc486cd32bd1c28b301e3c4fc608ec19ee5c6979251dcc70c757e8f9704e",
+  "changelog": "修复 OpenClaw 升级时依赖装不上（ERESOLVE）、失败被显示成成功、插件依赖互相覆盖"
 }
