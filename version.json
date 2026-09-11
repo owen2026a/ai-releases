@@ -1,6 +1,6 @@
 {
-  "version": "1.4.213",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.213/ai",
-  "checksum": "sha256:742cb6c88cf94afcade2f7151b62958400879b6d4a841b13ade83f2f3d6cfbef",
-  "changelog": "适配 OpenClaw 2026.9.x（Node 22 已不支持）+ 各家大模型刷新到 2026-09 + 修复 OpenClaw 页交互失效"
+  "version": "1.4.214",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.214/ai",
+  "checksum": "sha256:10e20091396ff60c1335b2edbb32ab4561e0dc932511f24116df02185802a448",
+  "changelog": "修复 OpenClaw 升级时 Node 被其它软件自带版本遮蔽导致的「装好了却说没装」"
 }
