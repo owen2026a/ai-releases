@@ -1,6 +1,6 @@
 {
-  "version": "1.4.219",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.219/ai",
-  "checksum": "sha256:db20d841445f200a46ad29401022c6caabeb0c922c05c0d57c6f8aad0601848f",
-  "changelog": "修 OpenClaw 服务实际跑在不受支持的 Node 上、一整类管道假成功、升级残留 2.7G 临时文件"
+  "version": "1.4.220",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.220/ai",
+  "checksum": "sha256:df7a14157542710e3eb062279a940795c77471961ca9dac5d01ea2af171f8aa9",
+  "changelog": "修 v1.4.219 的 set -e 回归；服务就绪改为轮询端口，起不来按失败退出"
 }
