@@ -1,6 +1,6 @@
 {
-  "version": "1.4.218",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.218/ai",
-  "checksum": "sha256:d80cac976005732f7606757ced8763beb03eabd2bf97aa70b4f8f0c4465b9314",
-  "changelog": "适配 OpenClaw 2026.9.5 与 Hermes v0.21.4：升级前磁盘预检、Hermes 升级后按需重启 gateway"
+  "version": "1.4.219",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.219/ai",
+  "checksum": "sha256:db20d841445f200a46ad29401022c6caabeb0c922c05c0d57c6f8aad0601848f",
+  "changelog": "修 OpenClaw 服务实际跑在不受支持的 Node 上、一整类管道假成功、升级残留 2.7G 临时文件"
 }
