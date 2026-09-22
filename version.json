@@ -1,6 +1,6 @@
 {
-  "version": "1.4.217",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.217/ai",
-  "checksum": "sha256:8d9822cd5d35e43cf9169872b6e6713b5b88e66cde90309929f18bd4b34d4f6b",
-  "changelog": "磁盘分析能认出缓存目录并一键清理（大文件扫描发现不了的那类占用）"
+  "version": "1.4.218",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.218/ai",
+  "checksum": "sha256:d80cac976005732f7606757ced8763beb03eabd2bf97aa70b4f8f0c4465b9314",
+  "changelog": "适配 OpenClaw 2026.9.5 与 Hermes v0.21.4：升级前磁盘预检、Hermes 升级后按需重启 gateway"
 }
