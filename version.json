@@ -1,6 +1,6 @@
 {
-  "version": "1.4.221",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.221/ai",
-  "checksum": "sha256:d75c67530967f2ea9393226da596fba0e73fd0027b5362f2126be6d0795c9303",
-  "changelog": "安全更新：Go 1.27.3 编译；PHP/Node.js 漏洞检测与一键更新；新增 PHP 8.4/8.5；nginx/Redis/Node 默认版本与 AI 模型刷新"
+  "version": "1.4.222",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.222/ai",
+  "checksum": "sha256:d1e3ba6297c2a3200fc5b6e0c25f9e3730d708f8c1e959b4b17dbaea99e7bb68",
+  "changelog": "修正 CentOS 7 上 PHP 安全更新的错误提示（remi 已停止支持 EL7），包没变时不再重启 PHP-FPM"
 }
