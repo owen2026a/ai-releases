@@ -1,6 +1,6 @@
 {
-  "version": "1.4.220",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.220/ai",
-  "checksum": "sha256:df7a14157542710e3eb062279a940795c77471961ca9dac5d01ea2af171f8aa9",
-  "changelog": "修 v1.4.219 的 set -e 回归；服务就绪改为轮询端口，起不来按失败退出"
+  "version": "1.4.221",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.221/ai",
+  "checksum": "sha256:d75c67530967f2ea9393226da596fba0e73fd0027b5362f2126be6d0795c9303",
+  "changelog": "安全更新：Go 1.27.3 编译；PHP/Node.js 漏洞检测与一键更新；新增 PHP 8.4/8.5；nginx/Redis/Node 默认版本与 AI 模型刷新"
 }
