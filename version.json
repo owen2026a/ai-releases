@@ -1,1 +1,6 @@
-{"version":"1.4.223","download_url":"https://github.com/owen2026a/ai-releases/releases/download/v1.4.223/ai","checksum":"sha256:62a789f4488beda81fae4bee84ac52b9486b1fe49c2afd350b2666982f495026","changelog":"PHP 官方配置缓解一键应用/撤销（CVE-2026-109618/109619）：给 CentOS 7 等拿不到补丁的机器用，软件管理 PHP 卡片点「应用缓解」即在 FPM 所有 pool 写入官方缓解并校验重启，失败自动还原，可随时撤销。官方缓解不完整，根治仍需迁移到 EL8/9。"}
+{
+  "version": "1.4.224",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.224/ai",
+  "checksum": "sha256:87b2c8174186c8040e9926d74d70834ba7ca6214f32adbd9b2260ccab6f663b5",
+  "changelog": "CentOS/RHEL 7 一键源码编译 PHP 8.2/8.3 官方修复版接管 PHP-FPM，可一键切回 remi 版"
+}
