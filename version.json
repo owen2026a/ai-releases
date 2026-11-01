@@ -1,6 +1,6 @@
 {
-  "version": "1.4.228",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.228/ai",
-  "checksum": "sha256:89d98c54a6c209dc57a89260ef8b210a67f77bf4370c38403e3b2a08ced10995",
-  "changelog": "适配 OpenClaw 2026.10.9、Hermes 0.22.5 安装及官方稳定升级；修复 Node 同主版本补丁检测、NodeSource 来源识别及 CentOS 7 安全替换，保留全局包和备份；加强目标版本、PATH 遮蔽、下载校验和旧 glibc 拦截，安装升级隔离回归通过。"
+  "version": "1.4.229",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.229/ai",
+  "checksum": "sha256:8f83dd34c19e63367314b7f2b679982ae3e7af00bb8935baddfc877045516e90",
+  "changelog": "修复 Hermes 私有 Node 遮蔽导致系统 Node 更新失败；修复 Hermes 源码构建误报更新及同版本假成功；修复 OpenClaw 大安装包触发旧更新器回滚校验上限，增加预装验证、备份迁移、阶段日志和更新互斥；修复大日志阻塞，CentOS 7 和 43 页面回归通过。"
 }
