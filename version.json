@@ -1,6 +1,6 @@
 {
-  "version": "1.4.230",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.230/ai",
-  "checksum": "sha256:9af689b39aa63c1b1fa7b269fc48c3077aeadb3d25def7c3b16ba0643aac3fb9",
-  "changelog": "修复 OpenClaw 聊天页 Agent 模式误走纯聊天接口，恢复实际系统工具调用；绕开私有旧 Node 遮蔽，隔离会话并使用所选模型；执行失败明确报错，增加进度与取消处理，系统只读工具及 CentOS 7、43 页面回归通过。"
+  "version": "1.4.231",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.231/ai",
+  "checksum": "sha256:6dcbda5a067a217104739a17edbd91486a1c8b211d01b1e4047c845a090e10bb",
+  "changelog": "整合三批 AI 改进：隔离执行权限与会话，安全同步 OpenClaw/Hermes 配置；新增面板诊断与操作确认，修复长日志和断流误报；完善运行状态、调用统计和历史导出。CentOS 7、旧数据库迁移、真实登录与安全、43 页面回归通过。"
 }
