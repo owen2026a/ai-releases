@@ -1,6 +1,6 @@
 {
-  "version": "1.4.229",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.229/ai",
-  "checksum": "sha256:8f83dd34c19e63367314b7f2b679982ae3e7af00bb8935baddfc877045516e90",
-  "changelog": "修复 Hermes 私有 Node 遮蔽导致系统 Node 更新失败；修复 Hermes 源码构建误报更新及同版本假成功；修复 OpenClaw 大安装包触发旧更新器回滚校验上限，增加预装验证、备份迁移、阶段日志和更新互斥；修复大日志阻塞，CentOS 7 和 43 页面回归通过。"
+  "version": "1.4.230",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.230/ai",
+  "checksum": "sha256:9af689b39aa63c1b1fa7b269fc48c3077aeadb3d25def7c3b16ba0643aac3fb9",
+  "changelog": "修复 OpenClaw 聊天页 Agent 模式误走纯聊天接口，恢复实际系统工具调用；绕开私有旧 Node 遮蔽，隔离会话并使用所选模型；执行失败明确报错，增加进度与取消处理，系统只读工具及 CentOS 7、43 页面回归通过。"
 }
