@@ -1,6 +1,6 @@
 {
-  "version": "1.4.225",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.225/ai",
-  "checksum": "sha256:78cba71e235000dfa9d88e9cddbfa890eeadff4f24f7a6d0dfa2ff8346d7ae5e",
-  "changelog": "修复宝塔迁移定时任务、Redis 快照、MySQL/MariaDB 用户恢复、PHP 版本检查、防火墙规则、站点切换验收和清理保护；持久保存迁移进度，完善 CentOS 7 兼容与回归。"
+  "version": "1.4.226",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.226/ai",
+  "checksum": "sha256:dd0b6d26f3e3c77d9176f07a5a245da0c4879f3713a8377a8d365898d30af1e7",
+  "changelog": "面板安全加固：修复会话撤销、权限越界、CSRF/WebSocket 来源校验、Webhook 验签、文件访问和 XSS；强化本地 2FA、可信代理、白名单、密钥存储及集群请求限制；通过 CentOS 7 安全与迁移回归。"
 }
