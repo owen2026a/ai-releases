@@ -1,6 +1,6 @@
 {
-  "version": "1.4.224",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.224/ai",
-  "checksum": "sha256:87b2c8174186c8040e9926d74d70834ba7ca6214f32adbd9b2260ccab6f663b5",
-  "changelog": "CentOS/RHEL 7 一键源码编译 PHP 8.2/8.3 官方修复版接管 PHP-FPM，可一键切回 remi 版"
+  "version": "1.4.225",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.225/ai",
+  "checksum": "sha256:78cba71e235000dfa9d88e9cddbfa890eeadff4f24f7a6d0dfa2ff8346d7ae5e",
+  "changelog": "修复宝塔迁移定时任务、Redis 快照、MySQL/MariaDB 用户恢复、PHP 版本检查、防火墙规则、站点切换验收和清理保护；持久保存迁移进度，完善 CentOS 7 兼容与回归。"
 }
