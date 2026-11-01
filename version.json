@@ -1,6 +1,6 @@
 {
-  "version": "1.4.226",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.226/ai",
-  "checksum": "sha256:dd0b6d26f3e3c77d9176f07a5a245da0c4879f3713a8377a8d365898d30af1e7",
-  "changelog": "面板安全加固：修复会话撤销、权限越界、CSRF/WebSocket 来源校验、Webhook 验签、文件访问和 XSS；强化本地 2FA、可信代理、白名单、密钥存储及集群请求限制；通过 CentOS 7 安全与迁移回归。"
+  "version": "1.4.227",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.227/ai",
+  "checksum": "sha256:ee75fa73a027099ccfc50f073bae407c093b110da1aeeb8fc6d0f951db04c14a",
+  "changelog": "修复 v1.4.226 浏览器登录提示 CSRF 来源校验失败：调整 Referrer-Policy，恢复原生表单登录与退出，保留来源和令牌校验；通过 CentOS 7 HTTP/HTTPS 真实浏览器回归。"
 }
