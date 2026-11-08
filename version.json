@@ -1,6 +1,6 @@
 {
-  "version": "1.4.231",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.231/ai",
-  "checksum": "sha256:6dcbda5a067a217104739a17edbd91486a1c8b211d01b1e4047c845a090e10bb",
-  "changelog": "整合三批 AI 改进：隔离执行权限与会话，安全同步 OpenClaw/Hermes 配置；新增面板诊断与操作确认，修复长日志和断流误报；完善运行状态、调用统计和历史导出。CentOS 7、旧数据库迁移、真实登录与安全、43 页面回归通过。"
+  "version": "1.4.232",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.232/ai",
+  "checksum": "sha256:9a57161b02c5c6117f11f0a2982cd40927c7fc5806519a5b7088f6770f92c537",
+  "changelog": "修复宝塔迁移配置误删、验收误报、超时子进程残留与端口误判；支持 IPv6/指定 IP/仅 HTTPS、健康检查路径及取消迁移。完善 PHP 接管和 SELinux PID 标签；CentOS 7.9 实机故障回滚、固化及重启恢复回归通过。"
 }
