@@ -1,6 +1,6 @@
 {
-  "version": "1.4.237",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.237/ai",
-  "checksum": "sha256:162f9c0888add3c610811690f34dfb9098359b6811be17d607b937419777c3bf",
-  "changelog": "面板迁移模块安全加固、闭环增强、CentOS 7 全栈适配与向导体验重构：统一识别并导入 Valkey/Redis；修复 Web 误停与 1Panel 私钥/PHP 源码泄露隐患，支持 1Panel v2 agent.db 与宝塔 9.x 拆分库及 Laravel 运行子目录；补齐配置固化自动入库、迁移证书 webroot 自动续签、离线 SQL/容器库导入、PostgreSQL 迁移与 UFW/iptables 防火墙兼容；全面适配 CentOS 7 Vault/EPEL 归档源、老版 PHP 5.2~7.3 原位收编与 systemd 219；升级前端自适应向导与 AI 诊断排障。"
+  "version": "1.4.238",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.238/ai",
+  "checksum": "sha256:3ec08bea9ef191c35cf96695494357f9c70f0e353a922218ee5f8a4b6b89a6ab",
+  "changelog": "优化 OpenClaw 升级备份速度与包目录权限控制，新增企业微信等频道插件版本检测与可视化一键升级最新版"
 }
