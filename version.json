@@ -1,6 +1,6 @@
 {
-  "version": "1.4.234",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.234/ai",
-  "checksum": "sha256:1f71a7b13a7b6ca35412291501e6d1fb7333b2f8e552965556b408beaef48246",
-  "changelog": "重构操作审计异步队列并补齐认证/权限/防火墙/终端等全模块审计埋点，修复 CSV 公式注入与保留策略越权；新增 TOTP 防重放、2FA 双重验证关闭与会话吊销；修复 OpenClaw 外部令牌加密与限流、XFF 右起可信 IP 解析、IP 白名单去指纹化及内核参数白名单校验。"
+  "version": "1.4.235",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.235/ai",
+  "checksum": "sha256:fdb94f6b171e754f43100471dd9983717b93f98787a462430f9231792ea084ed",
+  "changelog": "全量刷新各家 AI 大模型最新列表与官方 USD 定价（Gemini 4 Hydrogen/Carbon、Claude Fable 5.2、GPT-6.1 Terra/6 Sol、Qwen4-Max、Kimi K3.1 Pro、Mistral Large 4 GA、GLM-5.3、MiniMax M3.1、Nemotron 3.5 及最新图像模型），修复 Gemini 4 思考（Thinking）输出上限与 thought 分片过滤，并完善全站平板与手机端响应式布局。"
 }
