@@ -1,6 +1,6 @@
 {
-  "version": "1.4.232",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.232/ai",
-  "checksum": "sha256:9a57161b02c5c6117f11f0a2982cd40927c7fc5806519a5b7088f6770f92c537",
-  "changelog": "修复宝塔迁移配置误删、验收误报、超时子进程残留与端口误判；支持 IPv6/指定 IP/仅 HTTPS、健康检查路径及取消迁移。完善 PHP 接管和 SELinux PID 标签；CentOS 7.9 实机故障回滚、固化及重启恢复回归通过。"
+  "version": "1.4.233",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.233/ai",
+  "checksum": "sha256:87b312ccee81514477cce256eb0474c6ae84ac9cd4e5da45a125a94aeb3f6745",
+  "changelog": "完善集群节点生命周期管理、大文件流式同步与 TLS/SSO 安全控制；统一 systemd 与非 systemd 面板持久化升级事务及异常中断自动恢复，支持旧版非 systemd 节点与 Docker PID 1 容器接管恢复。"
 }
