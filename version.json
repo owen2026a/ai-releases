@@ -1,6 +1,6 @@
 {
-  "version": "1.4.233",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.233/ai",
-  "checksum": "sha256:87b312ccee81514477cce256eb0474c6ae84ac9cd4e5da45a125a94aeb3f6745",
-  "changelog": "完善集群节点生命周期管理、大文件流式同步与 TLS/SSO 安全控制；统一 systemd 与非 systemd 面板持久化升级事务及异常中断自动恢复，支持旧版非 systemd 节点与 Docker PID 1 容器接管恢复。"
+  "version": "1.4.234",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.234/ai",
+  "checksum": "sha256:1f71a7b13a7b6ca35412291501e6d1fb7333b2f8e552965556b408beaef48246",
+  "changelog": "重构操作审计异步队列并补齐认证/权限/防火墙/终端等全模块审计埋点，修复 CSV 公式注入与保留策略越权；新增 TOTP 防重放、2FA 双重验证关闭与会话吊销；修复 OpenClaw 外部令牌加密与限流、XFF 右起可信 IP 解析、IP 白名单去指纹化及内核参数白名单校验。"
 }
