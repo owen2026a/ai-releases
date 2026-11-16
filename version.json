@@ -1,6 +1,6 @@
 {
-  "version": "1.4.236",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.236/ai",
-  "checksum": "sha256:83564d17edc97a8458f19392524c9999f52de443c512fd867e5e41f36d6aa578",
-  "changelog": "网站管理模块全链路安全加固与体验重构：清零全部 P0/P1 安全与稳定性缺陷；新增运行子目录绑定(RunSubdir)、未绑定域名 444/HTTPS 握手拦截、精细化重定向、SSL 证书夹复用与续签自动广播、ZeroSSL 多 CA 切换、一键关闭 HTTPS/HSTS/TLS1.3、多路径反代与 SNI/SSE 免缓冲、上传/并发/带宽限速、CDN 真实 IP 还原及持久化自定义 Nginx 片段；支持 Node/Python/Go/Java 运行环境项目守护建站、孤儿配置巡检一键纳管、存量站原子刷新配置、误删站点从备份复活；全新 7 分页统一站点设置中心，Chart.js/CodeMirror 与 GeoIP 全量本地离线化。"
+  "version": "1.4.237",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.237/ai",
+  "checksum": "sha256:162f9c0888add3c610811690f34dfb9098359b6811be17d607b937419777c3bf",
+  "changelog": "面板迁移模块安全加固、闭环增强、CentOS 7 全栈适配与向导体验重构：统一识别并导入 Valkey/Redis；修复 Web 误停与 1Panel 私钥/PHP 源码泄露隐患，支持 1Panel v2 agent.db 与宝塔 9.x 拆分库及 Laravel 运行子目录；补齐配置固化自动入库、迁移证书 webroot 自动续签、离线 SQL/容器库导入、PostgreSQL 迁移与 UFW/iptables 防火墙兼容；全面适配 CentOS 7 Vault/EPEL 归档源、老版 PHP 5.2~7.3 原位收编与 systemd 219；升级前端自适应向导与 AI 诊断排障。"
 }
