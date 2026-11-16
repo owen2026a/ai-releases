@@ -1,6 +1,6 @@
 {
   "version": "1.4.235",
   "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.235/ai",
-  "checksum": "sha256:fdb94f6b171e754f43100471dd9983717b93f98787a462430f9231792ea084ed",
-  "changelog": "全量刷新各家 AI 大模型最新列表与官方 USD 定价（Gemini 4 Hydrogen/Carbon、Claude Fable 5.2、GPT-6.1 Terra/6 Sol、Qwen4-Max、Kimi K3.1 Pro、Mistral Large 4 GA、GLM-5.3、MiniMax M3.1、Nemotron 3.5 及最新图像模型），修复 Gemini 4 思考（Thinking）输出上限与 thought 分片过滤，并完善全站平板与手机端响应式布局。"
+  "checksum": "sha256:170c366d6a4c8b321f133b6dc4446d2bfe43d60dcfe3ed608f2dd8b3a8649207",
+  "changelog": "全量刷新各家 AI 大模型最新列表与官方 USD 定价（Gemini 4 Hydrogen/Carbon、Claude Fable 5.2、GPT-6.1 Terra/6 Sol、Qwen4-Max、Kimi K3.1 Pro、Mistral Large 4 GA、GLM-5.3、MiniMax M3.1、Nemotron 3.5 及最新图像模型），修复 Gemini 4 思考（Thinking）输出上限与 thought 分片过滤；合入全站 35+ 模块平板与手机端响应式改造（1024px 侧边栏断点、网站双视图与右侧固定操作列、全站表格横滑与弹窗 ESC 关闭）。"
 }
