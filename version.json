@@ -1,6 +1,6 @@
 {
-  "version": "1.4.235",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.235/ai",
-  "checksum": "sha256:170c366d6a4c8b321f133b6dc4446d2bfe43d60dcfe3ed608f2dd8b3a8649207",
-  "changelog": "全量刷新各家 AI 大模型最新列表与官方 USD 定价（Gemini 4 Hydrogen/Carbon、Claude Fable 5.2、GPT-6.1 Terra/6 Sol、Qwen4-Max、Kimi K3.1 Pro、Mistral Large 4 GA、GLM-5.3、MiniMax M3.1、Nemotron 3.5 及最新图像模型），修复 Gemini 4 思考（Thinking）输出上限与 thought 分片过滤；合入全站 35+ 模块平板与手机端响应式改造（1024px 侧边栏断点、网站双视图与右侧固定操作列、全站表格横滑与弹窗 ESC 关闭）。"
+  "version": "1.4.236",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.236/ai",
+  "checksum": "sha256:83564d17edc97a8458f19392524c9999f52de443c512fd867e5e41f36d6aa578",
+  "changelog": "网站管理模块全链路安全加固与体验重构：清零全部 P0/P1 安全与稳定性缺陷；新增运行子目录绑定(RunSubdir)、未绑定域名 444/HTTPS 握手拦截、精细化重定向、SSL 证书夹复用与续签自动广播、ZeroSSL 多 CA 切换、一键关闭 HTTPS/HSTS/TLS1.3、多路径反代与 SNI/SSE 免缓冲、上传/并发/带宽限速、CDN 真实 IP 还原及持久化自定义 Nginx 片段；支持 Node/Python/Go/Java 运行环境项目守护建站、孤儿配置巡检一键纳管、存量站原子刷新配置、误删站点从备份复活；全新 7 分页统一站点设置中心，Chart.js/CodeMirror 与 GeoIP 全量本地离线化。"
 }
