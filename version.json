@@ -1,6 +1,6 @@
 {
-  "version": "1.4.240",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.240/ai",
-  "checksum": "sha256:36b9aa5081cce1f834aa2d0b0d79b4c3fd549c29467d66cb89a900bd1c2bda8c",
-  "changelog": "软件管理全栈升级（动态追新引擎/防误删备份卸载/新增PG等6款软件/全软件平滑更新）、国产与新版系统及国内镜像自适应、各软件装后运维弹窗与Web/PHP/PG专页深化，以及Docker全栈进阶运维发布"
+  "version": "1.4.241",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.241/ai",
+  "checksum": "sha256:69c623641ebe54d8b4e4b367990c8d84208baf84a3254f6a17fe5e554f25368b",
+  "changelog": "Docker 模块安全加固（修复 Docker 29 负空间显示/终端 90s 断连/进程孤儿泄漏等 15 项问题）、8 项进阶运维闭环（容器逆向生成 Compose/固化镜像/实时 top/双文件编排语法预检/网络热插拔/卷打包备份）、内置离线 Ace+xterm 编辑器与移动端双视图，以及应用商店扩容至 93 款软件"
 }
