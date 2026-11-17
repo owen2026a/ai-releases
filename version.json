@@ -1,6 +1,6 @@
 {
-  "version": "1.4.239",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.239/ai",
-  "checksum": "sha256:7b0d5b732a1ccd84f7058055c54d69da3dcca5e176b311e5551e86a52563082d",
-  "changelog": "文件管理全栈重构与安全加固、内置离线编辑器与终端、挂载点就近原子回收站、大日志实时查看与语法预检、文件 AI Copilot 及全面板多轮诊断 SRE Agent"
+  "version": "1.4.240",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.240/ai",
+  "checksum": "sha256:36b9aa5081cce1f834aa2d0b0d79b4c3fd549c29467d66cb89a900bd1c2bda8c",
+  "changelog": "软件管理全栈升级（动态追新引擎/防误删备份卸载/新增PG等6款软件/全软件平滑更新）、国产与新版系统及国内镜像自适应、各软件装后运维弹窗与Web/PHP/PG专页深化，以及Docker全栈进阶运维发布"
 }
