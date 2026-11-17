@@ -1,6 +1,6 @@
 {
-  "version": "1.4.242",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.242/ai",
-  "checksum": "sha256:b5c3f76beb93ad3f26f2d8ab9cc46f03968aa15168ec816418c8d95fbe65a99a",
-  "changelog": "v1.4.242: Valkey/Redis 管理模块安全加固、全 6 类数据编辑、RDB 快照备份归档与 5-Tab 工作台体验重构"
+  "version": "1.4.243",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.243/ai",
+  "checksum": "sha256:d0911d37898f8200fe5b6681fb613b756a7fac465e7a524b71591b1938c9b97d",
+  "changelog": "v1.4.243: MySQL/MariaDB 管理模块全栈重构、缺陷清零、细粒度权限/表结构/导入闭环与 AI DBA 深度赋能"
 }
