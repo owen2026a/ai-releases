@@ -1,6 +1,6 @@
 {
-  "version": "1.4.238",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.238/ai",
-  "checksum": "sha256:3ec08bea9ef191c35cf96695494357f9c70f0e353a922218ee5f8a4b6b89a6ab",
-  "changelog": "优化 OpenClaw 升级备份速度与包目录权限控制，新增企业微信等频道插件版本检测与可视化一键升级最新版"
+  "version": "1.4.239",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.239/ai",
+  "checksum": "sha256:7b0d5b732a1ccd84f7058055c54d69da3dcca5e176b311e5551e86a52563082d",
+  "changelog": "文件管理全栈重构与安全加固、内置离线编辑器与终端、挂载点就近原子回收站、大日志实时查看与语法预检、文件 AI Copilot 及全面板多轮诊断 SRE Agent"
 }
