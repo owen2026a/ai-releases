@@ -1,6 +1,6 @@
 {
-  "version": "1.4.247",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.247/ai",
-  "checksum": "sha256:4c8d18cb5a094073f18005065becf742a5346f6b2cb1b2eb9b0134f05f2881b1",
-  "changelog": "系统优化模块全栈重构与缺陷清零（五大工作负载预设、首次基准备份锁定、实时内核遥测看板、5-Tab工作台、OPcache加速、流式AI调优顾问与一键落地闭环）及Web服务器管理增强"
+  "version": "1.4.248",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.248/ai",
+  "checksum": "sha256:89d657ebce3fcc0a0299fef13d521f8ab9d0bbc9896e61ca98b98149467b7565",
+  "changelog": "PHP配置与扩展管理全栈重构与缺陷清零（防级联删FPM卸载保护、慢日志路径安全白名单、conf.d合并与JIT同步、6-Tab工作台、OPcache零停机清缓存、源文安全直编与PHP AI Copilot/SRE探针深度赋能）"
 }
