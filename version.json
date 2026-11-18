@@ -1,6 +1,6 @@
 {
-  "version": "1.4.262",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.262/ai",
-  "checksum": "sha256:a19b4b8be7a57583cd7cc0582a2c72408b19686e64013684681a8f1bfe701a2b",
-  "changelog": "权限管理全栈重构、缺陷清零、岗位模板、全局矩阵、安全体检与AI最小权限顾问"
+  "version": "1.4.263",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.263/ai",
+  "checksum": "sha256:7d20df9d89917f25f885dcca0d3618e23ebaf81492e9ff6fd8902b9b59ee5d78",
+  "changelog": "安全隧道（GOST v3）一键安装与更新支持内置 5 路国内高速镜像并发测速优选、循环内实时官方 SHA256 防篡改自动容灾切源及自定义 HTTPS 加速源"
 }
