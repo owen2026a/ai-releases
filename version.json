@@ -1,6 +1,6 @@
 {
-  "version": "1.4.248",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.248/ai",
-  "checksum": "sha256:89d657ebce3fcc0a0299fef13d521f8ab9d0bbc9896e61ca98b98149467b7565",
-  "changelog": "PHP配置与扩展管理全栈重构与缺陷清零（防级联删FPM卸载保护、慢日志路径安全白名单、conf.d合并与JIT同步、6-Tab工作台、OPcache零停机清缓存、源文安全直编与PHP AI Copilot/SRE探针深度赋能）"
+  "version": "1.4.249",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.249/ai",
+  "checksum": "sha256:08d2ae41ca99753cc88eb6dc79b3afa7f91ea1712e106fcc83128b6b6e901847",
+  "changelog": "Web服务器与网站防篡改模块全栈重构与缺陷清零（服务生命周期控制、多源实时日志、全局WAF进阶防护、HTTP/2弃用语法一键升级、备份恢复闭环、防篡改高危脚本预警与AI一键回填调优）"
 }
