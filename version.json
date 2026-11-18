@@ -1,6 +1,6 @@
 {
-  "version": "1.4.246",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.246/ai",
-  "checksum": "sha256:7190f7529945dbeec4b8dd5fbd931c80e6586fbf195a87c0adf661bb7205287f",
-  "changelog": "面板SSL证书模块全面重构：修复续签误伤外部证书、自签SAN退化、30秒sudo刷屏等缺陷，启用HTTP/2多路复用，新增站点证书夹自动跟随、800天自签重置与历史备份回滚"
+  "version": "1.4.247",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.247/ai",
+  "checksum": "sha256:4c8d18cb5a094073f18005065becf742a5346f6b2cb1b2eb9b0134f05f2881b1",
+  "changelog": "系统优化模块全栈重构与缺陷清零（五大工作负载预设、首次基准备份锁定、实时内核遥测看板、5-Tab工作台、OPcache加速、流式AI调优顾问与一键落地闭环）及Web服务器管理增强"
 }
