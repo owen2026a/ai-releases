@@ -1,6 +1,6 @@
 {
-  "version": "1.4.263",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.263/ai",
-  "checksum": "sha256:7d20df9d89917f25f885dcca0d3618e23ebaf81492e9ff6fd8902b9b59ee5d78",
-  "changelog": "安全隧道（GOST v3）一键安装与更新支持内置 5 路国内高速镜像并发测速优选、循环内实时官方 SHA256 防篡改自动容灾切源及自定义 HTTPS 加速源"
+  "version": "1.4.264",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.264/ai",
+  "checksum": "sha256:c94841d9a37f38474cf31388a7d8934ea020d22e254923bc4c77593f4a080246",
+  "changelog": "账户与边界安全三模块（IP白名单管理 / 我的 2FA / 修改密码）全栈深度审计、缺陷清零、TOTP密文存储与应急恢复码、个人在线设备会话管控及SSH免重启应急救援指令"
 }
