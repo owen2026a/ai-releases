@@ -1,6 +1,6 @@
 {
-  "version": "1.4.265",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.265/ai",
-  "checksum": "sha256:98e50be30756b38dc228e9b3c20ae821424db1adc9593e3d696af270e06b572a",
-  "changelog": "修复网站管理申请 SSL 证书时右下角红色报错一闪而过的问题，新增弹窗内持久错误详情与一键复制、HTTP-01 验证链路自动修复（目录权限/旧配置刷新/迁移站子目录兼容/UA黑名单豁免/Certbot参数升级）及中文根因诊断"
+  "version": "1.4.266",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.266/ai",
+  "checksum": "sha256:44037247a35e7f077308d5acb4fe2193b1dbf379f93e3965a5b24c356780ada9",
+  "changelog": "安全隧道（GOST v3）稳定性加固：安装 GOST 时自动开启 BBR/16MB缓冲区/禁空闲慢启动/PMTU探测内核调优，Shadowsocks 升级 TCP+UDP (ssu) 全双栈，新增抗丢包独立流 relay+wss 与 Clash 防污染 DNS"
 }
