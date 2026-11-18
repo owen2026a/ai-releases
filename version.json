@@ -1,6 +1,6 @@
 {
-  "version": "1.4.252",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.252/ai",
-  "checksum": "sha256:9bfc628f9d0b21ef802074f0c2c9e19a98914872c88e6b0d18d7121121765630",
-  "changelog": "Fail2ban入侵防御模块全栈重构：清零INI换行指令注入RCE、.local配置优先级倒挂保存失效、无原子回滚、自锁失联及搬迁丢配置等12项缺陷；新增5-Tab工作台、监牢一键启停、场景预设库、全局白名单同步与累犯递增封禁、UFW/iptables孤儿规则巡检清理、在线fail2ban-regex正则沙箱及AI专家一键回填赋能"
+  "version": "1.4.253",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.253/ai",
+  "checksum": "sha256:577948cced6b3ed5cec9cc0f146f7f133687554a2a5a5ad155b4fe5c928ad3bf",
+  "changelog": "五大核心运维模块（计划任务/进程管理/监控告警/通知渠道/服务自愈）与AI中枢全栈加固：清零全渠道SSRF、凭据脱敏无损更新、crontab百分号转义、进程防误杀、网卡计数回绕、多盘水位、自愈并发双扫与Lost Update等18项缺陷；新增Crontab历史备份回滚、探活命令在线试跑、交互式趋势图、4个SRE诊断工具及AI一键回填"
 }
