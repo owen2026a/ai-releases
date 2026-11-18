@@ -1,6 +1,6 @@
 {
-  "version": "1.4.243",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.243/ai",
-  "checksum": "sha256:d0911d37898f8200fe5b6681fb613b756a7fac465e7a524b71591b1938c9b97d",
-  "changelog": "v1.4.243: MySQL/MariaDB 管理模块全栈重构、缺陷清零、细粒度权限/表结构/导入闭环与 AI DBA 深度赋能"
+  "version": "1.4.244",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.244/ai",
+  "checksum": "sha256:948d0cfb0e222cd89cfa03a6e74637198e2fa7196cff45e47f60650fe344dfd3",
+  "changelog": "v1.4.244: 域名管理三大模块（注册商管理/域名管理/批量修改NS服务器）全链路缺陷清零、安全加固与交互体验重构"
 }
