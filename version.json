@@ -1,6 +1,6 @@
 {
-  "version": "1.4.256",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.256/ai",
-  "checksum": "sha256:36e73d2049f07b93ffe993e8d21903400d7ef54cdbc1dab2cc0ab1a41dde2c87",
-  "changelog": "系统快照与进程守护全栈重构：打通快照自动纳管还原进程守护单元与升级前自动快照；修复恢复前备份优先误删、坏包恢复假死、systemd吞空$VAR环境变量及崩溃循环无法停止等缺陷；新增快照备注、本地上传导入、每日自动快照、守护进程环境变量注入、实时日志追踪与AI诊断工具"
+  "version": "1.4.257",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.257/ai",
+  "checksum": "sha256:01e310d300eadd03c43ffcd5afb09cdb5186675ca030362dc63281dca2a03f59",
+  "changelog": "v1.4.257：AI 智能中心全栈升级与安全闭环——新增顶层「AI 智能中心」并重构侧边栏信息架构与 RBAC 显隐；AI 调用指标新增日/月 USD 预算守卫、Chart.js 双轴趋势图与 OpenRouter 真实账单计费；AI 巡检日报新增 0–100 量化评分、静默通知策略与一键交给 AI 助手排障联动；OpenClaw/Hermes/悬浮助手支持新建与清空分离、多模态识图、自定义网关、宽屏抽屉及仅放行面板回环配对。"
 }
