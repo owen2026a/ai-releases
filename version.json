@@ -1,6 +1,6 @@
 {
-  "version": "1.4.255",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.255/ai",
-  "checksum": "sha256:a555324df22626581048db2d0b901b2f39371bc783d0436c0bcd84f7bf148314",
-  "changelog": "Web终端模块全栈重构与加固：清零公网CDN内网白屏、空闲超时被自动重连续命失效、exit强行重开、403死循环重连、中文UTF-8跨帧1007断连、PTY尾部遗言丢失、OSC颜色查询污染、CentOS7 Locale警告及AI命令$宏篡改等8大类缺陷；新增流控背压、统一优雅退出审计链、快捷命令库、多标签同步输入、防Pastejacking粘贴确认与流式环境感知AI助手"
+  "version": "1.4.256",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.256/ai",
+  "checksum": "sha256:36e73d2049f07b93ffe993e8d21903400d7ef54cdbc1dab2cc0ab1a41dde2c87",
+  "changelog": "系统快照与进程守护全栈重构：打通快照自动纳管还原进程守护单元与升级前自动快照；修复恢复前备份优先误删、坏包恢复假死、systemd吞空$VAR环境变量及崩溃循环无法停止等缺陷；新增快照备注、本地上传导入、每日自动快照、守护进程环境变量注入、实时日志追踪与AI诊断工具"
 }
