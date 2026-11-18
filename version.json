@@ -1,6 +1,6 @@
 {
-  "version": "1.4.258",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.258/ai",
-  "checksum": "sha256:4b824abb00d0103ab9e7e7858c603e1953fd7395a29f33b82adc58d6f98a56b9",
-  "changelog": "v1.4.258：新增「安全隧道 (GOST v3)」全栈模块——支持一键安装启用与双层防中断自愈守护；企业级端口转发（TCP+UDP双栈、端口段映射、双端对接码加密中转、主备容灾切换、PROXY Protocol、流量配额熔断与防火墙联动）；域名管理 DNS-01 自动签发、443 真实网站共生抗主动探测、纯 IP 证书与双向 mTLS 整合；回环隐藏式防封 TUN VPN、通用客户端（Clash/Shadowrocket/v2rayN）离线扫码订阅中心，以及集群多机双端一键组网与 AI 隧道顾问。"
+  "version": "1.4.259",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.259/ai",
+  "checksum": "sha256:acb55b00452490c8e68d73edec3a52d8071d9ce14d4499bee5d9fa62d6b88821",
+  "changelog": "v1.4.259：用户管理（IAM 访问安全）全栈重构与缺陷清零——修复重复模板覆盖导致表格列错位、管理员自编辑掉线自踢、零管理员降级死锁及侧边栏模块级权限断层；新增 5 维安全态势卡片、在线会话透视与一键强制下线、模块权限透视与审计侧滑抽屉、强密码生成器、快捷权限预设模板及登录限流锁手动解锁；同步升级修改密码与 2FA 页面，并将「迁移工具」更名为「宝塔/1Panel迁移」。"
 }
