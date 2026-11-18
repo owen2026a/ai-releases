@@ -1,6 +1,6 @@
 {
-  "version": "1.4.251",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.251/ai",
-  "checksum": "sha256:911852420b54a9db348ff2dcef8f505becc8e764efa3d56b35dbab0636c89ee6",
-  "changelog": "防火墙与边界安全模块全栈重构：修复 SSH 隧道端口误判、v6 规则连坐误删与 firewalld 离线启用锁死等 10 项隐患；新增防自锁二级告警确认引擎、全端口 IP 黑白名单/防爆破限速、监听状态与 Docker 绕过暴露检测、防火墙 AI 安全顾问批量预检落地及全新工作台界面"
+  "version": "1.4.252",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.252/ai",
+  "checksum": "sha256:9bfc628f9d0b21ef802074f0c2c9e19a98914872c88e6b0d18d7121121765630",
+  "changelog": "Fail2ban入侵防御模块全栈重构：清零INI换行指令注入RCE、.local配置优先级倒挂保存失效、无原子回滚、自锁失联及搬迁丢配置等12项缺陷；新增5-Tab工作台、监牢一键启停、场景预设库、全局白名单同步与累犯递增封禁、UFW/iptables孤儿规则巡检清理、在线fail2ban-regex正则沙箱及AI专家一键回填赋能"
 }
