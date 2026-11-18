@@ -1,6 +1,6 @@
 {
-  "version": "1.4.245",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.245/ai",
-  "checksum": "sha256:e2f4909049434efb72eebceb8321941905b567ea3efa8de6b7a3313290f58040",
-  "changelog": "PostgreSQL管理模块全栈重构：修复自动备份目录割裂与停服死锁等10项缺陷，新增PG15+细粒度授权、表结构DDL、备份上传导入、WAL复制槽巡检、6-Tab离线工作台与AI DBA深度诊断"
+  "version": "1.4.246",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.246/ai",
+  "checksum": "sha256:7190f7529945dbeec4b8dd5fbd931c80e6586fbf195a87c0adf661bb7205287f",
+  "changelog": "面板SSL证书模块全面重构：修复续签误伤外部证书、自签SAN退化、30秒sudo刷屏等缺陷，启用HTTP/2多路复用，新增站点证书夹自动跟随、800天自签重置与历史备份回滚"
 }
