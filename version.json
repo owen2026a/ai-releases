@@ -1,6 +1,6 @@
 {
-  "version": "1.4.244",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.244/ai",
-  "checksum": "sha256:948d0cfb0e222cd89cfa03a6e74637198e2fa7196cff45e47f60650fe344dfd3",
-  "changelog": "v1.4.244: 域名管理三大模块（注册商管理/域名管理/批量修改NS服务器）全链路缺陷清零、安全加固与交互体验重构"
+  "version": "1.4.245",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.245/ai",
+  "checksum": "sha256:e2f4909049434efb72eebceb8321941905b567ea3efa8de6b7a3313290f58040",
+  "changelog": "PostgreSQL管理模块全栈重构：修复自动备份目录割裂与停服死锁等10项缺陷，新增PG15+细粒度授权、表结构DDL、备份上传导入、WAL复制槽巡检、6-Tab离线工作台与AI DBA深度诊断"
 }
