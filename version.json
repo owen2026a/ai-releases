@@ -1,6 +1,6 @@
 {
-  "version": "1.4.250",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.250/ai",
-  "checksum": "sha256:ec28d3f944a2563176fe818be67764e036f04780832ba2e9e03b4073434a0912",
-  "changelog": "CDN管理与边缘加速联动模块全栈重构：清零Cloudflare/阿里云假成功、Zone路径注入与Nil Panic、超30条URL失败、泛域名误拒及子账号越权等12+项缺陷；补齐多模式一键清缓存、注册商凭据安全复用、Zone自动拉取、每日配额实时查询、站点关联与真实访客IP还原、开发模式、防SSRF边缘缓存探测器、Git部署后自动清缓存及CDN架构AI专家赋能"
+  "version": "1.4.251",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.251/ai",
+  "checksum": "sha256:911852420b54a9db348ff2dcef8f505becc8e764efa3d56b35dbab0636c89ee6",
+  "changelog": "防火墙与边界安全模块全栈重构：修复 SSH 隧道端口误判、v6 规则连坐误删与 firewalld 离线启用锁死等 10 项隐患；新增防自锁二级告警确认引擎、全端口 IP 黑白名单/防爆破限速、监听状态与 Docker 绕过暴露检测、防火墙 AI 安全顾问批量预检落地及全新工作台界面"
 }
