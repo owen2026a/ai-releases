@@ -1,6 +1,6 @@
 {
-  "version": "1.4.253",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.253/ai",
-  "checksum": "sha256:577948cced6b3ed5cec9cc0f146f7f133687554a2a5a5ad155b4fe5c928ad3bf",
-  "changelog": "五大核心运维模块（计划任务/进程管理/监控告警/通知渠道/服务自愈）与AI中枢全栈加固：清零全渠道SSRF、凭据脱敏无损更新、crontab百分号转义、进程防误杀、网卡计数回绕、多盘水位、自愈并发双扫与Lost Update等18项缺陷；新增Crontab历史备份回滚、探活命令在线试跑、交互式趋势图、4个SRE诊断工具及AI一键回填"
+  "version": "1.4.254",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.254/ai",
+  "checksum": "sha256:be6ada2fbb0588e92d8a4dd0834eda59b055f16dc14310d5cda4ad2dc013c36c",
+  "changelog": "操作日志与定时备份模块全栈重构与容灾升级：彻底修复MySQL定时备份(.sql.gz)被tar校验误判100%失败的回归Bug、清理旧备份无白名单误删隐患、SSH参数注入与云端IMDS SSRF风险、调度器串行阻塞漏跑、阿里云OSS/腾讯云COS Virtual-Hosted寻址403及WebDAV中文路径编码问题；新增自定义目录备份、站点/库下拉发现、SHA256校验徽章与全渠道归档流式下载闭环，补齐审计日志敏感凭据自动脱敏、退出信号刷盘与过期日志.jsonl.gz自动压缩归档"
 }
