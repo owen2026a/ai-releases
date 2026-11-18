@@ -1,6 +1,6 @@
 {
-  "version": "1.4.261",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.261/ai",
-  "checksum": "sha256:bcadbc6669166f8960a3566282444f6ecf19263fb1969fbe8010f5224732a5d8",
-  "changelog": "FTP用户管理模块全栈重构、高危越权缺陷清零、FTPS/防火墙联动加固与可观测性升级"
+  "version": "1.4.262",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.262/ai",
+  "checksum": "sha256:a19b4b8be7a57583cd7cc0582a2c72408b19686e64013684681a8f1bfe701a2b",
+  "changelog": "权限管理全栈重构、缺陷清零、岗位模板、全局矩阵、安全体检与AI最小权限顾问"
 }
