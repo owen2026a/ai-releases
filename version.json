@@ -1,6 +1,6 @@
 {
-  "version": "1.4.254",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.254/ai",
-  "checksum": "sha256:be6ada2fbb0588e92d8a4dd0834eda59b055f16dc14310d5cda4ad2dc013c36c",
-  "changelog": "操作日志与定时备份模块全栈重构与容灾升级：彻底修复MySQL定时备份(.sql.gz)被tar校验误判100%失败的回归Bug、清理旧备份无白名单误删隐患、SSH参数注入与云端IMDS SSRF风险、调度器串行阻塞漏跑、阿里云OSS/腾讯云COS Virtual-Hosted寻址403及WebDAV中文路径编码问题；新增自定义目录备份、站点/库下拉发现、SHA256校验徽章与全渠道归档流式下载闭环，补齐审计日志敏感凭据自动脱敏、退出信号刷盘与过期日志.jsonl.gz自动压缩归档"
+  "version": "1.4.255",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.255/ai",
+  "checksum": "sha256:a555324df22626581048db2d0b901b2f39371bc783d0436c0bcd84f7bf148314",
+  "changelog": "Web终端模块全栈重构与加固：清零公网CDN内网白屏、空闲超时被自动重连续命失效、exit强行重开、403死循环重连、中文UTF-8跨帧1007断连、PTY尾部遗言丢失、OSC颜色查询污染、CentOS7 Locale警告及AI命令$宏篡改等8大类缺陷；新增流控背压、统一优雅退出审计链、快捷命令库、多标签同步输入、防Pastejacking粘贴确认与流式环境感知AI助手"
 }
