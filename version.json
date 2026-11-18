@@ -1,6 +1,6 @@
 {
-  "version": "1.4.266",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.266/ai",
-  "checksum": "sha256:44037247a35e7f077308d5acb4fe2193b1dbf379f93e3965a5b24c356780ada9",
-  "changelog": "安全隧道（GOST v3）稳定性加固：安装 GOST 时自动开启 BBR/16MB缓冲区/禁空闲慢启动/PMTU探测内核调优，Shadowsocks 升级 TCP+UDP (ssu) 全双栈，新增抗丢包独立流 relay+wss 与 Clash 防污染 DNS"
+  "version": "1.4.267",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.267/ai",
+  "checksum": "sha256:f634c55d8d33e04416049846401a104eb8ee714a82f167d0b0bb3ab17a5d907e",
+  "changelog": "面板首页（Dashboard）全局指挥舱重构：四层高密度对称布局、动态健康状态灯、公网/内网 IP 脱敏复制、六宫格业务资产速览、智能风险雷达、零依赖 SVG 实时流量与资源趋势曲线、多分区磁盘切换、Top 进程速览与非阻塞极速采样"
 }
