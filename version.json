@@ -1,6 +1,6 @@
 {
-  "version": "1.4.259",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.259/ai",
-  "checksum": "sha256:acb55b00452490c8e68d73edec3a52d8071d9ce14d4499bee5d9fa62d6b88821",
-  "changelog": "v1.4.259：用户管理（IAM 访问安全）全栈重构与缺陷清零——修复重复模板覆盖导致表格列错位、管理员自编辑掉线自踢、零管理员降级死锁及侧边栏模块级权限断层；新增 5 维安全态势卡片、在线会话透视与一键强制下线、模块权限透视与审计侧滑抽屉、强密码生成器、快捷权限预设模板及登录限流锁手动解锁；同步升级修改密码与 2FA 页面，并将「迁移工具」更名为「宝塔/1Panel迁移」。"
+  "version": "1.4.260",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.260/ai",
+  "checksum": "sha256:6626dcab825b095af3aafeabaf51390075fb4c29a651a50bf19a5455fcfdc6c9",
+  "changelog": "v1.4.260：服务器搬迁（AI Panel 跨机直连克隆）全链路缺陷清零与高保真加固——修复暂存目录命中 /www/ai 保护守卫阻断网站搬迁、Docker Compose 根目录 ./ 解压越界误判、单独勾选配置项报 400 及进度破 200% 问题；支持站内安全软链接、中文站独立 DirName、RunSubdir 子目录隔离、ForceHTTPS/LE 自动续期、MySQL 账号密码哈希随迁、PG 增量与守护进程环境变量还原；补齐双向 HTTPS 指纹强校验、源机配对状态管理与中断任务一键清理。"
 }
