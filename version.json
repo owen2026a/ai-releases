@@ -1,6 +1,6 @@
 {
-  "version": "1.4.268",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.268/ai",
-  "checksum": "sha256:7145fdd6728c9205856f3ac22cb3f88151ba95af1d2df0e54617ed6d0d473958",
-  "changelog": "新增独立AI代码工作台(Code Studio)与网站/文件双入口直达；新增多模型配置池(置顶Google Gemini并AES-256加密)与对话内一键热切；打通Gemini(含thoughtSignature)/Anthropic/OpenAI Responses/兼容网关四协议原生Function Calling与项目沙箱工具、Diff审阅和整轮一键回滚；内置工作区PTY终端深度融合Gemini CLI/Claude Code/Codex/OpenCode原生CLI。"
+  "version": "1.4.269",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.269/ai",
+  "checksum": "sha256:65578cba45e65f661db6d42208363a38f403a37edfbdf964c259c93e53bdb110",
+  "changelog": "优化面板升级重启空窗期体验：普通浏览器刷新改为展示自动探活刷新的503中文升级等待页，消除误报authentication failed（集群恢复API仍严格401 HMAC鉴权）；刷新2026-11-19最新大模型目录与价目表：Google Gemini新增gemini-4-neon，OpenAI升级默认至gpt-6.2-astra并新增gpt-6.2-sol，OpenRouter新增openrouter/auto-code与最新免费模型。"
 }
