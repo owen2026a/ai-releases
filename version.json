@@ -1,6 +1,6 @@
 {
-  "version": "1.4.271",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.271/ai",
-  "checksum": "sha256:1738606fca9036e013589b63f02999318a80349ca76d0526fa8b987db40bb1f7",
-  "changelog": "AI 代码工作台全面 IDE 级增强：支持对话框截图粘贴/上传四协议原生识图、专业多 Tab Ace 编辑器（自动补全/语法检查 AI 修复/历史快照/选区浮条）、Ctrl+P 秒开、全局代码搜索、文件重命名/回收站软删、@ 文件补全、Git Diff 审阅与 AI Code Review、单文件精准回滚及自由拖拽分栏布局"
+  "version": "1.4.272",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.272/ai",
+  "checksum": "sha256:f5d4dbe63ff49031341418b8e2245bee7d8a2b445f338cae292fcf4d5d302f4f",
+  "changelog": "AI 代码工作台新增入侵分析检测与应急响应(DFIR)全套闭环：五大只读安全取证工具(WebShell/伪造时间/防篡改、访问日志溯源、宿主机后门、MySQL/PG安全审计、面板20+只读诊断桥接)、零Token快速安全体检、「🛡️ 应急」只读取证模式、可疑攻击IP一键站点拉黑/防火墙封禁、恶意文件一键隔离回收站、重建防篡改基线与导出Markdown应急报告"
 }
