@@ -1,6 +1,6 @@
 {
-  "version": "1.4.267",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.267/ai",
-  "checksum": "sha256:f634c55d8d33e04416049846401a104eb8ee714a82f167d0b0bb3ab17a5d907e",
-  "changelog": "面板首页（Dashboard）全局指挥舱重构：四层高密度对称布局、动态健康状态灯、公网/内网 IP 脱敏复制、六宫格业务资产速览、智能风险雷达、零依赖 SVG 实时流量与资源趋势曲线、多分区磁盘切换、Top 进程速览与非阻塞极速采样"
+  "version": "1.4.268",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.268/ai",
+  "checksum": "sha256:7145fdd6728c9205856f3ac22cb3f88151ba95af1d2df0e54617ed6d0d473958",
+  "changelog": "新增独立AI代码工作台(Code Studio)与网站/文件双入口直达；新增多模型配置池(置顶Google Gemini并AES-256加密)与对话内一键热切；打通Gemini(含thoughtSignature)/Anthropic/OpenAI Responses/兼容网关四协议原生Function Calling与项目沙箱工具、Diff审阅和整轮一键回滚；内置工作区PTY终端深度融合Gemini CLI/Claude Code/Codex/OpenCode原生CLI。"
 }
