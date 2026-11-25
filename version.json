@@ -1,6 +1,6 @@
 {
-  "version": "1.4.272",
-  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.272/ai",
-  "checksum": "sha256:f5d4dbe63ff49031341418b8e2245bee7d8a2b445f338cae292fcf4d5d302f4f",
-  "changelog": "AI 代码工作台新增入侵分析检测与应急响应(DFIR)全套闭环：五大只读安全取证工具(WebShell/伪造时间/防篡改、访问日志溯源、宿主机后门、MySQL/PG安全审计、面板20+只读诊断桥接)、零Token快速安全体检、「🛡️ 应急」只读取证模式、可疑攻击IP一键站点拉黑/防火墙封禁、恶意文件一键隔离回收站、重建防篡改基线与导出Markdown应急报告"
+  "version": "1.4.273",
+  "download_url": "https://github.com/owen2026a/ai-releases/releases/download/v1.4.273/ai",
+  "checksum": "sha256:8e919875d0261ccafde0a9c3814b4fcd85c67b8cc6f14301af213c86505b6778",
+  "changelog": "v1.4.273: 软件管理列表SWR秒开加速与骨架屏加载态；修复hermes版本探测卡顿；apt-get update自动携带--allow-releaseinfo-change容错并将废弃ppa:ondrej/php平滑迁移至packages.sury.org/php"
 }
